@@ -1,0 +1,34 @@
+:root {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(43, 43, 43);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.headline-1 {
+  font-size: x-large;
+  width: 60%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.section-2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 60px;
+}
+
+.headline-2 {
+  width: 40%;
+}
