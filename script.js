@@ -1041,17 +1041,113 @@
 
 // console.log(Latop());
 
-class Console {
-  constructor(brand, model, year) {
-    this.brand = brand;
-    this.model = model;
-    this.year = year;
+// class Console {
+//   constructor(brand, model, year) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.year = year;
+//   }
+//   turnOn() {
+//     return `This ${this.brand} ${this.model} from ${this.year} is on`;
+//   }
+// }
+
+// let xbox = new Console("Xbox", "Series X", 2020);
+
+// console.log(xbox.turnOn());
+
+// let wallet = {
+//   money: 100,
+//   cards: 4,
+//   specialCoins: {
+//     gold: 3,
+//     silver: 2,
+//     bronze: 1,
+//   },
+// };
+
+// console.log(wallet.money);
+
+// function wallet(money, cards) {
+//   return {
+//     money,
+//     cards,
+//     printCoin() {
+//       console.log(money, cards);
+//     },
+//   };
+// }
+
+// console.log(wallet(4, 12).money);
+
+// function Circle(radius = 3) {
+//   this.radius = radius;
+//   this.draw = function () {
+//     console.log("draw");
+//   };
+// }
+
+// let reCircle = new Circle(10);
+
+// let reCircle2 = new Circle(20);
+
+// reCircle.color = "red";
+
+// delete reCircle2["radius"];
+
+// console.log(reCircle);
+// console.log(reCircle2);
+
+// Task 1: Create a Person class
+class Person {
+  constructor(name = "Tom", age = 20, energy = 100) {
+    this.name = name;
+    this.age = age;
+    this.energy = energy;
   }
-  turnOn() {
-    return `This ${this.brand} ${this.model} from ${this.year} is on`;
+  sleep() {
+    this.energy += 10;
+  }
+  doSomethingFun() {
+    this.energy -= 10;
+  }
+}
+// Task 2: Code a Worker Class
+class Worker extends Person {
+  constructor(name, age, energy, xp = 0, hourlyWage = 10) {
+    super(name, age, energy);
+    this.xp = xp;
+    this.hourlyWage = hourlyWage;
+  }
+  goToWork() {
+    this.xp += 10;
   }
 }
 
-let xbox = new Console("Xbox", "Series X", 2020);
+// Task 3: Code an intern object
+function intern() {
+  let intern = new Worker();
+  intern.name = "Bob";
+  intern.age = 21;
+  intern.energy = 110;
+  intern.xp = 0;
+  intern.hourlyWage = 10;
+  intern.goToWork();
+  return intern;
+}
 
-console.log(xbox.turnOn());
+console.log(intern().goToWork());
+
+// Task 4: Code a manager object
+function manager() {
+  let manager = new Worker();
+  manager.name = "Bob";
+  manager.age = 21;
+  manager.energy = 110;
+  manager.xp = 0;
+  manager.hourlyWage = 10;
+  manager.doSomethingFun();
+  return manager;
+}
+
+manager();
