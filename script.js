@@ -1099,55 +1099,146 @@
 // console.log(reCircle2);
 
 // Task 1: Create a Person class
-class Person {
-  constructor(name = "Tom", age = 20, energy = 100) {
-    this.name = name;
-    this.age = age;
-    this.energy = energy;
-  }
-  sleep() {
-    this.energy += 10;
-  }
-  doSomethingFun() {
-    this.energy -= 10;
-  }
-}
-// Task 2: Code a Worker Class
-class Worker extends Person {
-  constructor(name, age, energy, xp = 0, hourlyWage = 10) {
-    super(name, age, energy);
-    this.xp = xp;
-    this.hourlyWage = hourlyWage;
-  }
-  goToWork() {
-    this.xp += 10;
-  }
-}
+// class Person {
+//   constructor(name = "Tom", age = 20, energy = 100) {
+//     this.name = name;
+//     this.age = age;
+//     this.energy = energy;
+//   }
+//   sleep() {
+//     this.energy += 10;
+//   }
+//   doSomethingFun() {
+//     this.energy -= 10;
+//   }
+// }
+// // Task 2: Code a Worker Class
+// class Worker extends Person {
+//   constructor(name, age, energy, xp = 0, hourlyWage = 10) {
+//     super(name, age, energy);
+//     this.xp = xp;
+//     this.hourlyWage = hourlyWage;
+//   }
+//   goToWork() {
+//     this.xp += 10;
+//   }
+// }
 
-// Task 3: Code an intern object
-function intern() {
-  let intern = new Worker();
-  intern.name = "Bob";
-  intern.age = 21;
-  intern.energy = 110;
-  intern.xp = 0;
-  intern.hourlyWage = 10;
-  intern.goToWork();
-  return intern;
+// // Task 3: Code an intern object
+// function intern() {
+//   let intern = new Worker();
+//   intern.name = "Bob";
+//   intern.age = 21;
+//   intern.energy = 110;
+//   intern.xp = 0;
+//   intern.hourlyWage = 10;
+//   intern.goToWork();
+//   return intern;
+// }
+
+// console.log(intern().goToWork());
+
+// // Task 4: Code a manager object
+// function manager() {
+//   let manager = new Worker();
+//   manager.name = "Bob";
+//   manager.age = 21;
+//   manager.energy = 110;
+//   manager.xp = 0;
+//   manager.hourlyWage = 10;
+//   manager.doSomethingFun();
+//   return manager;
+// }
+
+// manager();
+
+// let { PI } = Math;
+
+// console.log(PI);
+
+// class Sophia {
+//   constructor(name, age, position, team) {
+//     this.name = name;
+//     this.age = age;
+//     this.position = position;
+//     this.team = team;
+//   }
+//   printPlayer() {
+//     return `${this.name} plays for ${this.team}, he is a ${this.age} years old ${this.position}.`;
+//   }
+// }
+
+// class Brandenburg extends Sophia {
+//   constructor(name, age, position, team, conference, homeKit, isCaptain) {
+//     super(name, age, position, team);
+//     this.conference = conference;
+//     this.homeKit = homeKit;
+//     this.isCaptain = isCaptain;
+//   }
+//   printPlayer() {
+//     return (
+//       super.printPlayer() +
+//       ` He plays in ${this.conference} and his home kit is ${this.homeKit}. ${
+//         this.name
+//       } is the ${this.isCaptain ? "captain" : "vice captain"}`
+//     );
+//   }
+// }
+
+// let uchiha = new Sophia("Uchiha", 37, "Midfielder", "Sophia");
+// let drago = new Brandenburg(
+//   "Drago",
+//   35,
+//   "Defense",
+//   "Brandenburg",
+//   "Indigo",
+//   "Black",
+//   true
+// );
+
+// console.log(uchiha.printPlayer());
+// console.log(drago.printPlayer());
+
+// let gamesystems = {
+//   console1: "Xbox",
+//   console2: "Playstation",
+//   console3: "Nintendo",
+// };
+
+// for (let gamesystem of Object.values(gamesystems)) {
+//   console.log(gamesystem, gamesystems[gamesystem]);
+// }
+
+// console.log(gamesystems["console2"]);
+
+// function randomOpt() {
+//   let randomVar;
+//   if (Math.random() < 0.5) {
+//     randomVar = "man";
+//   } else {
+//     randomVar = "woman";
+//   }
+//   console.log(randomVar);
+
+//   let humanObj = {
+//     man: "Axel",
+//     woman: "Axela",
+//   };
+
+//   console.log(humanObj[randomVar]);
+// }
+
+// randomOpt();
+
+let = sengaTeam = {
+  position1: "Dev Ops",
+  position2: "Data Analyst",
+  position3: "Data Scientist",
+  position4: "Web Developer",
+  position5: "Frontend Developer",
+  position6: "Backend Developer",
+};
+
+for (let teamMember of Object.keys(sengaTeam)) {
+  console.log(sengaTeam[teamMember]);
 }
-
-console.log(intern().goToWork());
-
-// Task 4: Code a manager object
-function manager() {
-  let manager = new Worker();
-  manager.name = "Bob";
-  manager.age = 21;
-  manager.energy = 110;
-  manager.xp = 0;
-  manager.hourlyWage = 10;
-  manager.doSomethingFun();
-  return manager;
-}
-
-manager();
