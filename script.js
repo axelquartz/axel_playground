@@ -1230,15 +1230,190 @@
 
 // randomOpt();
 
-let = sengaTeam = {
-  position1: "Dev Ops",
-  position2: "Data Analyst",
-  position3: "Data Scientist",
-  position4: "Web Developer",
-  position5: "Frontend Developer",
-  position6: "Backend Developer",
-};
+// let = sengaTeam = {
+//   position1: "Dev Ops",
+//   position2: "Data Analyst",
+//   position3: "Data Scientist",
+//   position4: "Web Developer",
+//   position5: "Frontend Developer",
+//   position6: "Backend Developer",
+// };
 
-for (let teamMember of Object.keys(sengaTeam)) {
-  console.log(sengaTeam[teamMember]);
-}
+// for (let teamMember of Object.keys(sengaTeam)) {
+//   console.log(sengaTeam[teamMember]);
+// }
+
+// function Axel(age, name) {
+//   this.age = age;
+//   this.name = name;
+// }
+
+// let jorge = new Axel(30, "Jorge");
+
+// console.log(Axel.prototype);
+// class Human {
+//   talk() {
+//     return "Talking";
+//   }
+// }
+
+// class Man extends Human {
+//   talkMore() {
+//     return super.talk(), "Talking more";
+//   }
+// }
+
+// let man1 = new Man();
+
+// console.log(man1.talkMore());
+
+// const house = ["floor", "wall", "roof"];
+
+// // for (let houseEl of house) {
+// //   console.log(houseEl);
+// // }
+
+// const modernHouse = Object.create(house);
+// modernHouse[0] = "vitropiso";
+
+// console.log(modernHouse[0]);
+
+// let house = {
+//   floor: "tierra",
+//   wall: "concreto",
+//   roof: "estuco",
+// };
+
+// let modernHouse = Object.create(house);
+// modernHouse.floor = "vitropiso";
+// modernHouse.wall = "muro";
+// modernHouse.roof = "techo";
+// modernHouse.window = "ventana";
+
+// for (let houseEl in modernHouse) {
+//   console.log(houseEl, modernHouse[houseEl]);
+// }
+
+// console.log("-----------------------");
+
+// for (let houseEl of Object.keys(house)) {
+//   console.log(houseEl, house[houseEl]);
+// }
+
+// console.log(`${2} ${3} +
+// ${2} ${5}
+// -----------
+// ${4} ${8}`);
+
+// // Task 1
+// var dairy = [
+//   "cheese",
+//   "sour cream",
+//   "milk",
+//   "yogurt",
+//   "ice cream",
+//   "milkshake",
+// ];
+
+// function logDairy() {
+//   for (let prod of Object.keys(dairy)) {
+//     console.log(dairy[prod]);
+//   }
+// }
+
+// logDairy();
+
+// // Task 2
+// const animal = {
+//   canJump: true,
+// };
+
+// const bird = Object.create(animal);
+
+// bird.canFly = true;
+
+// bird.hasFeathers = true;
+
+// function birdCan() {
+//   for (let prop of Object.keys(bird)) {
+//     console.log(prop, bird[prop]);
+//   }
+// }
+
+// birdCan();
+// // Task 3
+// function animalCan() {
+//   for (let anProp in bird) {
+//     console.log(anProp, bird[anProp]);
+//   }
+// }
+
+// animalCan();
+
+// var dairy = [
+//   "cheese",
+//   "sour cream",
+//   "milk",
+//   "yogurt",
+//   "ice cream",
+//   "milkshake",
+// ];
+
+// function logDairy() {
+//   for (let prod of dairy) {
+//     console.log(prod);
+//   }
+// }
+
+// // logDairy();
+
+// // Task 2
+// const animal = {
+//   canJump: true,
+// };
+
+// const bird = Object.create(animal);
+
+// bird.canFly = true;
+
+// bird.hasFeathers = true;
+
+// function birdCan() {
+//   for (let prop of Object.keys(bird)) {
+//     console.log(`${prop}: ${bird[prop]}`);
+//   }
+// }
+// // birdCan();
+
+// // Task 3
+// function animalCan() {
+//   for (let prop in bird) {
+//     console.log(`${prop}: ${bird[prop]}`);
+//   }
+// }
+
+// animalCan();
+
+// const groupTests = [75, 95, 90, 80, 85];
+// let sumTests = 0;
+
+// function getAverage() {
+//   for (let i = 0; i < groupTests.length; i++) {
+//     sumTests += groupTests[i];
+
+//     // console.log(sumTests);
+//   }
+//   console.log(sumTests / groupTests.length);
+// }
+
+// getAverage();
+
+const groupTests = ["75", 95, "ds", 80, 85];
+
+// groupTests.filter(function () {
+//   return Number.isInteger();
+// });
+
+groupTests.map(function (num) {
+  console.log(num * 2);
+});
