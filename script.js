@@ -1408,12 +1408,101 @@
 
 // getAverage();
 
-const groupTests = ["75", 95, "ds", 80, 85];
+// const groupTests = ["75", 95, "ds", 80, 85];
 
-// groupTests.filter(function () {
-//   return Number.isInteger();
+// // groupTests.filter(function () {
+// //   return Number.isInteger();
+// // });
+
+// groupTests.map(function (num) {
+//   console.log(num * 2);
 // });
+// let arrExample = [];
 
-groupTests.map(function (num) {
-  console.log(num * 2);
-});
+// let objExample = {
+//   name: "Axel",
+//   age: 30,
+//   height: 182,
+//   weight: 93,
+// };
+
+// let val = Object.values(objExample);
+
+// arrExample.push(val);
+
+// // val.forEach(function (each) {
+// //   arrExample.push(each);
+// // });
+
+// console.log(val);
+
+// let bestBoxers = new Map();
+// bestBoxers.set(1, "The Champion");
+// bestBoxers.set(2, "The Runner-up");
+// bestBoxers.set(3, "The third place");
+
+// console.log(bestBoxers.get(1));
+
+// let arr = ["a", "b", "c", "d", "e", "f", "g"];
+
+// let arrUpper = toUpper(arr);
+
+// function toUpper(el) {
+//   return el.toUpperCase();
+// }
+
+// let arrTest = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// switch (arrTest.length < 12) {
+//   case true:
+//     arrTest.push("X");
+//     console.log(`The length of ${arrTest} is not big enough`);
+//     break;
+//   case false:
+//     console.log(`The array is big enough`);
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   arrTest.push("X");
+//   console.log(
+//     `The length of the array is ${arrTest.length}, here it is: ${arrTest}`
+//   );
+// }
+
+// while (arrTest.length < 20) {
+//   arrTest.push("X");
+//   console.log(arrTest);
+// }
+
+// let objTest = {
+//   name: "Axel",
+//   age: 30,
+//   weight: 93,
+// };
+
+// objTest["height"] = 129;
+
+// console.log(objTest);
+
+// let arr = [1, 2, "X", 4, "R"];
+
+// let letterArr = arr.filter(Number > 2);
+
+// console.log(letterArr);
+
+// let prices = [200, 300, "x", 500, 200, 300];
+
+// let overPrice = new Set(prices);
+
+// console.log(prices);
+
+// console.log(overPrice);
+
+let topCities = ["GDL", "Sao Paulo", "Buenos Aires", "Santiago", "Dallas"];
+
+const [] = topCities;
+const [mine, brazilOne, ...toVisit] = topCities;
+console.log(mine, brazilOne, toVisit);
+
+// console.log(...topCities);
+// console.log(topCities);
