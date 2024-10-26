@@ -1498,11 +1498,76 @@
 
 // console.log(overPrice);
 
-let topCities = ["GDL", "Sao Paulo", "Buenos Aires", "Santiago", "Dallas"];
+// let topCities = ["GDL", "Sao Paulo", "Buenos Aires", "Santiago", "Dallas"];
 
-const [] = topCities;
-const [mine, brazilOne, ...toVisit] = topCities;
-console.log(mine, brazilOne, toVisit);
+// // const [] = topCities;
+// // const [mine, brazilOne, ...toVisit] = topCities;
+// // console.log(mine, brazilOne, toVisit);
 
-// console.log(...topCities);
-// console.log(topCities);
+// // console.log(...topCities);
+// // console.log(topCities);
+
+// let [] = topCities;
+// let [mine, brazilOne, ...toVisit] = topCities;
+// let restCities = [...topCities]; //mine, brazilOne, toVisit
+// console.log(restCities);
+
+// let arrNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// // console.log(Math.max(...arrNum));
+
+// // console.log(typeof arrNum);
+// // console.log(typeof ...arrNum);
+
+// function addNum(a, b, c) {
+//   console.log(a + b + c);
+// }
+
+// addNum(...arrNum);
+// // console.log(...arrNum);
+
+// function addNums(...args) {
+
+// }
+
+// let coffeeMakes = {
+//   latte: 2,
+//   americano: 3,
+//   cappuccino: 4,
+//   mocha: 5,
+// };
+
+// let coffeeBrands = {
+//   starbucks: 6,
+//   mcdonalds: 7,
+//   kfc: 8,
+//   boston: 9,
+// };
+
+// coffeJoin = { ...coffeeMakes, ...coffeeBrands };
+
+// console.log(coffeJoin);
+
+// let coffeeFlavors = ["latte", "americano", "cappuccino", "mocha", "starbucks"];
+
+// let coffeePrices = [2, 3, 4, 5, 6];
+
+// let coffeeFinal = [...coffeeFlavors, ...coffeePrices, "Axel Coffee"];
+
+// console.log(coffeeFinal);
+
+// let coffee = "Nescafé Decaf 2024";
+
+// let arrayCoffee = [...coffee];
+
+// console.log(arrayCoffee);
+
+let objectTest = {
+  name: "Axel",
+  age: 30,
+  weight: 93,
+};
+
+let objectTest2 = { ...objectTest };
+
+console.log(objectTest2);
