@@ -1562,12 +1562,56 @@
 
 // console.log(arrayCoffee);
 
-let objectTest = {
-  name: "Axel",
-  age: 30,
-  weight: 93,
-};
+// let objectTest = {
+//   name: "Axel",
+//   age: 30,
+//   weight: 93,
+// };
 
-let objectTest2 = { ...objectTest };
+// let objectTest2 = { ...objectTest };
 
-console.log(objectTest2);
+// console.log(objectTest2);
+
+// const meal = ["soup", "steak", "ice cream"];
+// let [starter] = meal;
+// console.log(starter);
+
+// class Barcelona {
+//   constructor() {
+//     this.city = "Barcelona";
+//   }
+//   // logCity => console.log(this.city);
+//   logCity() {
+//     console.log(this.city);
+//   }
+// }
+
+// (a, b) => console.log(a + b);
+
+// ()
+// const city = (city, country) => {
+//   console.log(`You live in ${city}, ${country}`);
+//   return city, country;
+// };
+
+// city("Guadalaraba", "Mexico");
+
+// alert("Original");
+
+let mainBtn = document.getElementById("main-btn");
+let paragraph = document.getElementsByTagName("p")[0];
+paragraph.setAttribute("id", "main-paragraph");
+
+let newParagraph = document.createElement("p");
+newParagraph.innerText =
+  "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+mainBtn.addEventListener("click", () => {
+  alert("Clicked");
+  console.log("Clicked from Original");
+});
+
+paragraph.addEventListener("mouseover", () => {
+  console.log("Hovered from original");
+  paragraph.append(newParagraph);
+});
