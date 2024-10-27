@@ -1598,20 +1598,31 @@
 
 // alert("Original");
 
-let mainBtn = document.getElementById("main-btn");
-let paragraph = document.getElementsByTagName("p")[0];
-paragraph.setAttribute("id", "main-paragraph");
+// let mainBtn = document.getElementById("main-btn");
+// let paragraph = document.querySelectorAll("p")[1];
 
-let newParagraph = document.createElement("p");
-newParagraph.innerText =
-  "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+// let newParagraph = document.createElement("p");
+// newParagraph.innerText = prompt("What is your favorite color?");
 
-mainBtn.addEventListener("click", () => {
-  alert("Clicked");
-  console.log("Clicked from Original");
-});
+// mainBtn.addEventListener("click", () => {
+//   alert("Clicked");
+//   console.log("Clicked from Original");
+// });
 
-paragraph.addEventListener("mouseover", () => {
-  console.log("Hovered from original");
-  paragraph.append(newParagraph);
-});
+// paragraph.addEventListener("click", () => {
+//   console.log("Hovered from original");
+//   paragraph.append(newParagraph);
+// });
+
+// let changeText = () => {
+//   console.log("Hovered from original");
+//   paragraph.appendChild(newParagraph);
+// };
+
+let submit = document.getElementsByTagName("submit");
+
+let submitForm = () => {
+  alert("Submit");
+};
+
+submit.addEventListener("change", submitForm);
