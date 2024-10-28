@@ -1619,10 +1619,29 @@
 //   paragraph.appendChild(newParagraph);
 // };
 
-let submit = document.getElementsByTagName("submit");
+// let submit = document.getElementsByTagName("submit");
 
-let submitForm = () => {
-  alert("Submit");
-};
+// let submitForm = () => {
+//   alert("Submit");
+// };
 
-submit.addEventListener("change", submitForm);
+// submit.addEventListener("change", submitForm);
+
+let span = document.querySelectorAll("span");
+
+span[0].addEventListener("click", () => {
+  for (let i = 0; i < span.length; i++) {
+    let axelText;
+    axelText = document.createElement("p");
+    axelText.textContent = "Axelupaun";
+    axelText.classList.add("axel-text");
+    span[i].append(axelText, "X");
+  }
+});
+
+let title = document.querySelector("h1");
+
+let newH2 = document.createElement("h2");
+newH2.innerText = "Axelupis";
+
+title.append(newH2);

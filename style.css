@@ -32,3 +32,9 @@
 .headline-2 {
   width: 40%;
 }
+
+.axel-text {
+  background: blue;
+  display: inline-block;
+  width: 100px;
+}
