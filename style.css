@@ -38,3 +38,9 @@
   display: inline-block;
   width: 100px;
 }
+
+#yellow {
+  background: yellow;
+  display: inline-block;
+  color: black;
+}

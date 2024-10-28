@@ -1627,21 +1627,66 @@
 
 // submit.addEventListener("change", submitForm);
 
-let span = document.querySelectorAll("span");
+// let span = document.querySelectorAll("span");
 
-span[0].addEventListener("click", () => {
-  for (let i = 0; i < span.length; i++) {
-    let axelText;
-    axelText = document.createElement("p");
-    axelText.textContent = "Axelupaun";
-    axelText.classList.add("axel-text");
-    span[i].append(axelText, "X");
-  }
-});
+// span[0].addEventListener("click", () => {
+//   for (let i = 0; i < span.length; i++) {
+//     let axelText;
+//     axelText = document.createElement("p");
+//     axelText.textContent = "Axelupaun";
+//     axelText.classList.add("axel-text");
+//     span[i].append(axelText, "X");
+//   }
+// });
 
-let title = document.querySelector("h1");
+// let title = document.querySelector("h1");
 
-let newH2 = document.createElement("h2");
-newH2.innerText = "Axelupis";
+// let newH2 = document.createElement("h2");
+// newH2.innerText = "Axelupis";
 
-title.append(newH2);
+// title.append(newH2);
+
+// let answer = prompt("What is your favorite color?");
+// if (typeof answer === "string") {
+//   let h2El = document.createElement("h2");
+//   h2El.innerText = "Your favorite color is " + answer;
+//   document.querySelector("h1").append(h2El);
+// }
+
+// let h1 = document.createElement("h1");
+// let arr = ["Example Domain", "First Click", "Second Click", "Third Click"];
+
+// let handleClicks = () => {
+//   h1.innerText = arr[Math.floor(Math.random() * arr.length)];
+// let handleClicks = () => {
+//     switch(h1.innerText) {
+//         case arr[0]:
+//             h1.innerText = arr[1]
+//             break;
+//         case arr[1]:
+//             h1.innerText = arr[2]
+//             break;
+//         case arr[2]:
+//             h1.innerText = arr[3]
+//             break;
+//         case arr[3]:
+//             h1.innerText = arr[0]
+//             break
+//             default:
+//             h1.innerText = arr[0]
+//     }
+// }
+// };
+
+// let btn = document.getElementById("main-btn");
+
+// btn.addEventListener("click", handleClicks);
+
+let testObj = {
+  name: "Axel",
+  age: 30,
+  weight: 93,
+  coolness: function () {
+    return this.age * this.weight;
+  },
+};
