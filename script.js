@@ -1682,11 +1682,14 @@
 
 // btn.addEventListener("click", handleClicks);
 
-let testObj = {
-  name: "Axel",
-  age: 30,
-  weight: 93,
-  coolness: function () {
-    return this.age * this.weight;
-  },
-};
+// let testObj = {
+//   name: "Axel",
+//   age: 30,
+//   weight: 93,
+//   coolness: function () {
+//     return this.age * this.weight;
+//   },
+// };
+let sumNums = (a, b) => a + b;
+// expect(sumNums(2, 3)).toBe(5);
+module.exports = sumNums;
