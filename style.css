@@ -44,3 +44,14 @@
   display: inline-block;
   color: black;
 }
+.el-to-change {
+  display: inline;
+  background: yellow;
+  color: black;
+  width: 100px;
+  font-weight: 900;
+}
+
+.el-to-switch {
+  color: blue;
+}

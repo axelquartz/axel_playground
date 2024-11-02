@@ -1694,57 +1694,109 @@
 // // expect(sumNums(2, 3)).toBe(5);
 // module.exports = sumNums;
 
-// Given variables
-const dishData = [
-  {
-    name: "Italian pasta",
-    price: 9.55,
-  },
-  {
-    name: "Rice with veggies",
-    price: 8.65,
-  },
-  {
-    name: "Chicken with potatoes",
-    price: 15.55,
-  },
-  {
-    name: "Vegetarian Pizza",
-    price: 6.45,
-  },
-];
-const tax = 1.2;
+// // Given variables
+// const dishData = [
+//   {
+//     name: "Italian pasta",
+//     price: 9.55,
+//   },
+//   {
+//     name: "Rice with veggies",
+//     price: 8.65,
+//   },
+//   {
+//     name: "Chicken with potatoes",
+//     price: 15.55,
+//   },
+//   {
+//     name: "Vegetarian Pizza",
+//     price: 6.45,
+//   },
+// ];
+// const tax = 1.2;
 
-// Implement getPrices()
-function getPrices(taxBoolean) {
-  for (let dish of dishData) {
-    let finalPrice;
-    if (taxBoolean === true) {
-      finalPrice = dish.price * tax;
-    } else if (taxBoolean === false) {
-      finalPrice = dish.price;
-    } else {
-      console.log("You need to pass a boolean to the getPrices call!");
-      return;
-    }
-    console.log(`Dish: ${dish.name}, Price: $, ${finalPrice}`);
-  }
-}
+// // Implement getPrices()
+// function getPrices(taxBoolean) {
+//   for (let dish of dishData) {
+//     let finalPrice;
+//     if (taxBoolean === true) {
+//       finalPrice = dish.price * tax;
+//     } else if (taxBoolean === false) {
+//       finalPrice = dish.price;
+//     } else {
+//       console.log("You need to pass a boolean to the getPrices call!");
+//       return;
+//     }
+//     console.log(`Dish: ${dish.name}, Price: $, ${finalPrice}`);
+//   }
+// }
 
-// Implement getDiscount()
-function getDiscount(taxBoolean, guests) {
-  getPrices(taxBoolean);
-  if (typeof guests === "number" && guests > 0 && guests < 30) {
-    let discount = 0;
-    if (guests < 5) {
-      discount = 5;
-    } else if (guests >= 5) {
-      discount = 10;
-    }
-    console.log(`Discount is: $, ${discount}`);
-  } else {
-    console.log("The second argument must be a number between 0 and 30");
-  }
-}
+// // Implement getDiscount()
+// function getDiscount(taxBoolean, guests) {
+//   getPrices(taxBoolean);
+//   if (typeof guests === "number" && guests > 0 && guests < 30) {
+//     let discount = 0;
+//     if (guests < 5) {
+//       discount = 5;
+//     } else if (guests >= 5) {
+//       discount = 10;
+//     }
+//     console.log(`Discount is: $, ${discount}`);
+//   } else {
+//     console.log("The second argument must be a number between 0 and 30");
+//   }
+// }
 
-getDiscount(true, 10);
+// getDiscount(true, 10);
+
+// var x = 0 != 1;
+
+// let elToChange = document.querySelector("h2");
+// let elh1 = document.querySelector("h1");
+
+// // elToChange.setAttribute("class", "el-to-change el-to-switch");
+// // elToChange.setAttribute("id", "test-id");
+// // elToChange.className = "el-to-change el-to-switch";
+// elToChange.classList.add("el-to-change", "el-to-switch");
+// elToChange.classList.replace("el-to-switch", "el-to-mo");
+// elToChange.id = "new-test-id";
+
+// console.log(elToChange.className);
+// console.log(elToChange.id);
+
+// elToChange.innerText = "Element Changed";
+
+// elToChange.addEventListener("mouseover", function () {
+//   elToChange.style.fontSize = "110px";
+//   elToChange.innerText = "Su perra madre";
+//   elToChange.style.transition = "0.5s";
+// });
+
+// let objTest = {
+//   name: "Axel",
+//   age: 30,
+//   weight: 93,
+//   coolness: function () {
+//     return this.age * this.weight;
+//   },
+// };
+
+// let objTest2 = {
+//   name: "Axel",
+//   age: 30,
+//   weight: 93,
+//   coolness: function () {
+//     return this.age * this.weight;
+//   },
+// };
+
+// let arrTest = [objTest, objTest2];
+
+// console.log(arrTest);
+
+// let mainBtn = document.getElementById("main-btn");
+
+// mainBtn.addEventListener("click", () => {
+//   alert("Clicked");
+//   console.log("Clicked");
+// });
