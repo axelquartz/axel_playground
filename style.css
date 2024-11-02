@@ -11,47 +11,13 @@
   align-items: center;
 }
 
-.card {
-  justify-content: center;
-  margin: 40px auto;
-}
-
-.headline-1 {
-  font-size: x-large;
-  width: 60%;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.section-2 {
+form {
   display: flex;
-  justify-content: space-evenly;
-  margin: 60px;
+  flex-direction: column;
+  width: 600px;
+  margin: auto;
 }
 
-.headline-2 {
-  width: 40%;
-}
-
-.axel-text {
-  background: blue;
-  display: inline-block;
-  width: 100px;
-}
-
-#yellow {
-  background: yellow;
-  display: inline-block;
-  color: black;
-}
-.el-to-change {
-  display: inline;
-  background: yellow;
-  color: black;
-  width: 100px;
-  font-weight: 900;
-}
-
-.el-to-switch {
-  color: blue;
+input:focus:invalid {
+  border: 4px solid red;
 }

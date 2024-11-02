@@ -1754,49 +1754,49 @@
 // let elToChange = document.querySelector("h2");
 // let elh1 = document.querySelector("h1");
 
-// // elToChange.setAttribute("class", "el-to-change el-to-switch");
-// // elToChange.setAttribute("id", "test-id");
-// // elToChange.className = "el-to-change el-to-switch";
-// elToChange.classList.add("el-to-change", "el-to-switch");
-// elToChange.classList.replace("el-to-switch", "el-to-mo");
-// elToChange.id = "new-test-id";
+// elToChange.setAttribute("class", "el-to-change el-to-switch");
+// elToChange.setAttribute("id", "test-id");
+// elToChange.className = "el-to-change el-to-switch";
+elToChange.classList.add("el-to-change", "el-to-switch");
+elToChange.classList.replace("el-to-switch", "el-to-mo");
+elToChange.id = "new-test-id";
 
-// console.log(elToChange.className);
-// console.log(elToChange.id);
+console.log(elToChange.className);
+console.log(elToChange.id);
 
-// elToChange.innerText = "Element Changed";
+elToChange.innerText = "Element Changed";
 
-// elToChange.addEventListener("mouseover", function () {
-//   elToChange.style.fontSize = "110px";
-//   elToChange.innerText = "Su perra madre";
-//   elToChange.style.transition = "0.5s";
-// });
+elToChange.addEventListener("mouseover", function () {
+  elToChange.style.fontSize = "110px";
+  elToChange.innerText = "Su perra madre";
+  elToChange.style.transition = "0.5s";
+});
 
-// let objTest = {
-//   name: "Axel",
-//   age: 30,
-//   weight: 93,
-//   coolness: function () {
-//     return this.age * this.weight;
-//   },
-// };
+let objTest = {
+  name: "Axel",
+  age: 30,
+  weight: 93,
+  coolness: function () {
+    return this.age * this.weight;
+  },
+};
 
-// let objTest2 = {
-//   name: "Axel",
-//   age: 30,
-//   weight: 93,
-//   coolness: function () {
-//     return this.age * this.weight;
-//   },
-// };
+let objTest2 = {
+  name: "Axel",
+  age: 30,
+  weight: 93,
+  coolness: function () {
+    return this.age * this.weight;
+  },
+};
 
-// let arrTest = [objTest, objTest2];
+let arrTest = [objTest, objTest2];
 
-// console.log(arrTest);
+console.log(arrTest);
 
-// let mainBtn = document.getElementById("main-btn");
+let mainBtn = document.getElementById("main-btn");
 
-// mainBtn.addEventListener("click", () => {
-//   alert("Clicked");
-//   console.log("Clicked");
-// });
+mainBtn.addEventListener("click", () => {
+  alert("Clicked");
+  console.log("Clicked");
+});
