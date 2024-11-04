@@ -16,50 +16,16 @@
     <header>
       <h1>Axel's Playground</h1>
     </header>
-    <main>
-      <form method="post">
-        <div>
-          <label for="username">Username</label>
-          <input type="text" id="username" required minlength="2" oninput="this.nextElementSibling.value = this.value" />
-          <output>Axel</output>
-        </div>
-        <div>
-          <label for="password">Password</label>
-          <input type="password" id="password" required minlength="2" />
-        </div>
-        <div>
-          <label for="data-range">Range</label>
-          <input type="range" name="range" id="data-range" min="0" max="100" oninput="this.nextElementSibling.value = this.value" />
-          <output>50</output>
-        </div>
-        <div>
-          <label for="flowers">Favourite flower:</label><br />
-          <input list="flowers" name="flowers" />
-          <datalist id="flowers">
-            <option value="Rose"></option>
-            <option value="Lily"></option>
-            <option value="Tulip"></option>
-            <option value="Daffodil"></option>
-            <option value="Orchid"></option>
-          </datalist>
-        </div>
-        <div>
-          <fieldset id="'options">
-            <label for="radio">Choose option</label>
-            <label> <input type="radio" name="options" id="radio" value="option1" checked /> Option 1 </label>
-            <label> <input type="radio" name="options" id="radio" value="option2" /> Option 2 </label>
-          </fieldset>
-        </div>
-        <div>
-          <select name="fruits" multiple>
-            <option value="apple">Apple</option>
-            <option value="banana">Banana</option>
-            <option value="orange">Orange</option>
-            <option value="mango">Mango</option>
-          </select>
-        </div>
-        <button type="submit">Log In</button>
-      </form>
-    </main>
+    <body>
+      <div class="flex-container">
+        <div class="box box1">One..</div>
+        <div class="box box2">Two..</div>
+        <div class="box box3">Three..</div>
+        <div class="box box4">Four..</div>
+        <div class="box box5">Five..</div>
+        <div class="box box6">Six..</div>
+        <div class="box box7">Seven..</div>
+      </div>
+    </body>
   </body>
 </html>
