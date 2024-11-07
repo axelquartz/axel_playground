@@ -5,9 +5,9 @@
   color: pink;
 }
 
-.container {
+.CONTAINER {
   min-height: 100vh;
-  background-color: bisque;
+  background-color: #cdcdcd;
 }
 
 .letters {
@@ -28,14 +28,17 @@
   border-radius: 15%;
   border-color: rgb(250, 125, 75);
   border-style: solid;
-  animation: move 1s infinite linear alternate;
+  animation: move 0.5s infinite linear;
 }
 
 @keyframes move {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(100px);
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(10000px);
   }
 }
