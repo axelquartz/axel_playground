@@ -1819,18 +1819,224 @@
 //   console.log(`${key}: ${value} For Each Test`);
 // });
 
-let axelPromise = new Promise((resolve, reject) => {
-  if (resolve > 10) {
-    resolve("Axel");
-  } else {
-    reject("Nope");
-  }
-});
+// let axelPromise = new Promise((resolve, reject) => {
+//   if (resolve > 10) {
+//     resolve("Axel");
+//   } else {
+//     reject("Nope");
+//   }
+// });
 
-axelPromise
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((value) => {
-    console.log(value);
-  });
+// axelPromise
+//   .then((value) => {
+//     console.log(value);
+//   })
+//   .catch((value) => {
+//     console.log(value);
+//   });
+
+// let axelWin = new Promise((resolve, reject) => {
+//   console.log("Primise process started");
+
+//   let wins = true;
+
+//   setTimeout(() => {
+//     if (wins === true) {
+//       resolve("Promise resolved, Axel won");
+//     } else {
+//       reject("Promise rejected, Axel lost");
+//     }
+//   }, 2000);
+// });
+
+// axelWin
+//   .then((message) => {
+//     console.log(message);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// let usElection = new Promise((resolve, reject) => {
+//   let results = "Kamala";
+//   console.log("Generating results...");
+
+//   setTimeout(() => {
+//     if (results == "Trump") {
+//       resolve("Election is over, Trump wins");
+//     } else {
+//       reject("Election is over, Kamala wins");
+//     }
+//   }, 2000);
+// });
+
+// usElection
+//   .then((result) => {
+//     console.log(result);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// let playerLevels = {
+//   Arai: 89,
+//   Jest: 83,
+//   Mashiro: 85,
+//   Beck: 90,
+//   Hime: 90,
+//   Reila: 91,
+// };
+
+// let filterPlayerLevels = Object.values(playerLevels);
+
+// let topPlayers = filterPlayerLevels.filter((level) => level > 89);
+
+// console.log(topPlayers);
+
+// let manNames = ["Axel", "Ramon", "David", "Mark"];
+// let girlNames = ["Danna", "Perla", "Paola", "Helenn"];
+// let allNames = [...manNames, ...girlNames, "Mikola", "Thuram", "Xevius"];
+
+// console.log(...manNames);
+
+// let axel = {
+//   name: "Axel",
+//   age: 30,
+//   height: 183,
+// };
+
+// let updatedAxel = {
+//   ...axel,
+//   weight: 93,
+//   skinColor: "brown",
+//   sausageSize: 18,
+// };
+
+// let fullAxel = {
+//   ...axel,
+//   ...updatedAxel,
+// };
+
+// console.log(...axel);
+
+// let [first, second, ...rest] = ["Headphones", "ChatGPT", "Coffee", "VSCode", "Internet", "Keyboard"];
+
+// console.log(first, second, ...rest);
+
+// function addNums(...nums) {
+//   return nums.reduce((total, num) => total + num, 0);
+// }
+
+// console.log(addNums(10, 2));
+
+// let axel = {
+//   name: "Axel",
+//   age: 30,
+//   weight: 93,
+// };
+
+// let updatedAxel = {
+
+// let printNames = (...names) => {
+//   names.forEach((name) => {
+//     console.log(`The name is: ${name}`);
+//   });
+// };
+
+// console.log(printNames("Axel", "Ramon", "David", "Mark"));
+
+// let axel = {
+//   name: "Axel",
+//   age: 30,
+//   height: 183,
+//   weight: 93,
+//   skinColor: "brown",
+//   hairSize: "short",
+//   sausageSize: 18,
+// };
+
+// let { name, age, ...extraInfo } = axel;
+
+// console.log(age);
+
+// console.log(extraInfo);
+
+// function describeAxel(height, callback) {
+//   console.log(`Axel has a height of: ${height}`);
+//   callback();
+// }
+
+// function describeFeature() {
+//   console.log(`His feature is being guapo`);
+// }
+
+// describeAxel(183, describeFeature);
+
+// function makeOperation(num, callback) {
+//   console.log(num);
+//   callback();
+// }
+
+// function operation1(num) {
+//   console.log(num * 2);
+// }
+
+// function operation2() {
+//   num * 3;
+// }
+
+// console.log(makeOperation(10, operation1));
+// (function () {
+//   console.log("This is a function expression");
+// })();
+// let personObject = {
+//   name: "Axel",
+//   age: 30,
+//   height: 183,
+//   weight: 93,
+//   skinColor: function () {
+//     return `brown for ${this.name} person`;
+//   },
+//   hairSize: "short",
+// };
+
+// let axel = new Object(personObject);
+
+// axel.name = "Alejandro";
+
+// console.log(axel.skinColor());
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let tripleArr = arr.map(function (el) {
+//   return el * 3;
+// });
+
+// console.log(tripleArr);
+
+// let bigArr = arr.map(function (el) {
+//   return el > 8;
+// });
+
+// let reduceArr = arr.reduce(function (el, total) {
+//   return el + total;
+// });
+
+// console.log(reduceArr);
+
+// let arrDouble = arr.map((el) => el * 2);
+
+// let filterLessThan5 = arr.filter((val) => val < 5);
+
+// console.log(filterLessThan5);
+
+const palindromes = function (el) {
+  let reverseEl = el.split("").reverse().join("");
+  if (el == reverseEl) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+};
+
+palindromes("racecar");
