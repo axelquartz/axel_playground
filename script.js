@@ -2030,13 +2030,60 @@
 
 // console.log(filterLessThan5);
 
-const palindromes = function (el) {
-  let reverseEl = el.split("").reverse().join("");
-  if (el == reverseEl) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
-};
+// const palindromes = function (el) {
+//   let reverseEl = el.split("").reverse().join("");
+//   if (el == reverseEl) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// };
 
-palindromes("racecar");
+// palindromes("racecar");
+
+// const books = [
+//   {
+//     title: "Book",
+//     author: "Name",
+//   },
+//   {
+//     title: "Book2",
+//     author: "Name2",
+//   },
+// ];
+
+// const getTheTitles = function () {
+//   let title1 = books[0].title;
+//   let title2 = books[1].title;
+//   let bookTitles = [];
+//   bookTitles.push(title1, title2);
+
+//   console.log(bookTitles);
+// };
+
+// getTheTitles();
+
+// const findTheOldest = function () {};
+
+// function Animal(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// Animal.prototype.speak = function () {
+//   console.log(`I am ${this.name} and I am ${this.age} years old`);
+// };
+
+// Animal.prototype.height = this.height;
+
+// let eliot = new Animal("Eliot", 20);
+
+// // eliot.height = 183;
+
+// console.log(eliot);
+
+const myName = "Oxel";
+
+const testName = myName == "Oxel" ? true : false;
+
+console.log(testName);
