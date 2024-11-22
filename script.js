@@ -2082,8 +2082,52 @@
 
 // console.log(eliot);
 
-const myName = "Oxel";
+// const myName = "Oxel";
 
-const testName = myName == "Oxel" ? true : false;
+// const testName = myName == "Oxel" ? true : false;
 
-console.log(testName);
+// console.log(myName == 'Exel' ? :);
+// function makeTea(args) {
+//   return `Team meands ${args}`;
+// }
+
+// function processTeaOrder(fn) {
+//   return makeTea("Sweet tea");
+// }
+
+// console.log(processTeaOrder(makeTea));
+
+// function createTeaMaker() {
+//   return function (teaType) {
+//     return `Making ${teaType}`;
+//   };
+// }
+
+// let teaMaker = createTeaMaker();
+
+// console.log(teaMaker("Chai"));
+
+// function stringToNumber(input) {
+//   return typeof input === "string" ? Number(input) : console.log("Your input is not a string");
+// }
+// function flipBoolean(input) {
+//   return !input;
+// }
+// console.log(flipBoolean(1));
+
+// function whatAmI(input) {
+//   switch (typeof input) {
+//     case "string":
+//       console.log("Im a string");
+//       break;
+//     case "number":
+//       console.log("Im a number");
+//       break;
+//     default:
+//       console.log("Im something else");
+//   }
+// }
+
+// whatAmI(null);
+
+function isItTruthy(input) {}
