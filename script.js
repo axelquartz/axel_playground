@@ -2204,13 +2204,67 @@
 //  *   to add and returns the sum of the two.
 //  */
 // /******  878e0980-8eea-4b57-8ee5-8063b68ef402  *******/
-function addFirst(firstNum) {
-  const first = firstNum;
-  return function addSecond(secondNum) {
-    const second = secondNum;
-    return first + second;
+// function addFirst(firstNum) {
+//   const first = firstNum;
+//   return function addSecond(secondNum) {
+//     const second = secondNum;
+//     return first + second;
+//   };
+// }
+
+// let add20 = addFirst(20);
+// console.log(add20(2));
+
+// write an object constructor
+
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.printName = function () {
+//     console.log(this.name);
+//   };
+//   this.printAge = function () {
+//     console.log(this.age);
+//   };
+// }
+
+// function Human(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.printName = function () {
+//     console.log(this.name);
+//   };
+//   this.printAge = function () {
+//     console.log(this.age);
+//   };
+// }
+// let axel = new Human("Axel", 30);
+// axel.printName();
+
+// const person = {
+//   name: "Axel",
+//   age: 30,
+//   printName() {
+//     console.log(this.name);
+//   },
+//   printAge() {
+//     console.log(this.age);
+//   },
+// };
+
+// const axel = Object.create(person);
+
+// axel["name"] = "Alex";
+// // axel.printName();
+// // console.log(Object.getPrototypeOf());
+
+// console.log(person.valueOf());
+function makeClosure(val1) {
+  let firstVal = val1;
+  return function (val2) {
+    return firstVal + val2;
   };
 }
 
-let add20 = addFirst(20);
-console.log(add20(2));
+let add20 = makeClosure(20);
+console.log(add20(7));
