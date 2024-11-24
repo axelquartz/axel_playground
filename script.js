@@ -2130,4 +2130,87 @@
 
 // whatAmI(null);
 
-function isItTruthy(input) {}
+// function isItTruthy(input) {}
+
+// let myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// // function filterNumbers(arr) {
+// //   return arr.filter((el) => el > 5);
+// // }
+
+// // console.log(filterNumbers(myArr));
+
+// // function reverseArray(arr) {
+// //   return arr.reverse();
+// // }
+
+// // console.log(reverseArray(myArr));
+
+// function findMax(arr) {
+//   return arr;
+// }
+
+// function removeDuplicates(arr) {
+//   return arr;
+// }
+
+// function flattenArray(arr) {
+//   return arr;
+// }
+
+// let teaFlavors = ["green tea", "black tea", "oolong tea"];
+
+// let olongFlavor = teaFlavors.pop();
+
+// console.log(olongFlavor);
+
+// let popularTeas = ["green tea", "ooling tea", "chai", "Mexichai"];
+// // let secondaryTeas = ["red tea", "ass tea", "Luxalatto"];
+
+// // // let allTeas = [...popularTeas, ...secondaryTeas];
+// // let allTeas = popularTeas.concat(secondaryTeas);
+
+// // console.log(allTeas);
+
+// // for (let i = 0; i < popularTeas.length; i++) {
+// //   popularTeas[i] === "chai" ? console.log(`Yes, is in the index ${i}`) : false;
+// // }
+
+// let isChai = popularTeas.includes("chaiX");
+
+// console.log(isChai);
+
+// function makeAdding(firstNumber) {
+//   // "first" is scoped within the makeAdding function
+//   const first = firstNumber;
+//   return function resulting(secondNumber) {
+//     // "second" is scoped within the resulting function
+//     const second = secondNumber;
+//     return first + second;
+//   };
+// }
+// // but we've not seen an example of a "function"
+// // being returned, thus far - how do we use it?
+
+// const add5 = makeAdding(5);
+// console.log(add5(2)); // logs 7
+
+// /*************  ✨ Codeium Command ⭐  *************/
+// /**
+//  * Returns a new function that adds two numbers.
+//  *
+//  * @param {number} firstNum The first number to add.
+//  * @returns {function(number): number} A new function that takes a second number
+//  *   to add and returns the sum of the two.
+//  */
+// /******  878e0980-8eea-4b57-8ee5-8063b68ef402  *******/
+function addFirst(firstNum) {
+  const first = firstNum;
+  return function addSecond(secondNum) {
+    const second = secondNum;
+    return first + second;
+  };
+}
+
+let add20 = addFirst(20);
+console.log(add20(2));
