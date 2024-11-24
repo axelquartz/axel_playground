@@ -2259,12 +2259,54 @@
 // // console.log(Object.getPrototypeOf());
 
 // console.log(person.valueOf());
-function makeClosure(val1) {
-  let firstVal = val1;
-  return function (val2) {
-    return firstVal + val2;
+// function makeClosure(val1) {
+//   let firstVal = val1;
+//   return function (val2) {
+//     return firstVal + val2;
+//   };
+// }
+
+// let add20 = makeClosure(20);
+// console.log(add20(7));
+
+// function miroNums(num1) {
+//   return function (num2) {
+//     return num1 * num2;
+//   };
+// }
+
+// const newMiroOperation = miroNums(8);
+
+// console.log(newMiroOperation(7));
+
+// function Car() {
+//   this.color = "red";
+//   this.wheels = 4;
+//   this.speed = 0;
+//   this.accelerate = function (speed) {
+//     this.speed += speed;
+//   };
+// }
+
+// let mycar = Car("red", 4, 0);
+
+// console.log(mycar.speed);
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.printName = function () {
+    console.log(this.name);
   };
 }
 
-let add20 = makeClosure(20);
-console.log(add20(7));
+function createPerson(name, age) {
+  let printName = function () {
+    console.log(this.name);
+  };
+  return { name, age, printName };
+}
+
+let axel = createPerson("Axel", 30);
+
+axel.printName();
