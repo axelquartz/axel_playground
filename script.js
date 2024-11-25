@@ -2292,21 +2292,69 @@
 
 // console.log(mycar.speed);
 
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-  this.printName = function () {
-    console.log(this.name);
-  };
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.printName = function () {
+//     console.log(this.name);
+//   };
+// }
+
+// let erick = new Person("Erick", 30);
+
+// erick.printName();
+
+// function createPerson(name, age) {
+//   let printName = function () {
+//     console.log(this.name);
+//   };
+//   return { name, age, printName };
+// }
+
+// let axel = createPerson("Axel", 30);
+
+// axel.printName();
+
+// let uniqueVal = Symbol("unique");
+
+// console.log(typeof uniqueVal);
+
+// let ultraNum = 2n;
+
+// console.log(ultraNum);
+
+// let carBrands = ["Toyota", "Honda", "Nissan", "Chevrolet"];
+
+// for (el of carBrands) {
+//   console.log(el);
+// }
+
+// let axel = {
+//   name: "Axel",
+//   age: 30,
+//   printName() {
+//     console.log(this.name);
+//   },
+//   printAge() {
+//     console.log(this.age);
+//   },
+// };
+
+// // for (val in axel) {
+// //   console.log(val, axel[val]);
+// // }
+
+// // for (val in axel) {
+// //   console.log(`The key is ${val}, and the value is ${axel[val]}`);
+// // }
+
+// for (val of Object.keys(axel)) {
+//   console.log(`The key is ${val}, and the value is ${axel[val]}`);
+// }
+
+let names = ["Pepe", "Rau", "Erickssen", "Ramona"];
+
+while (names.length > 0) {
+  console.log(names.shift());
+  console.log(names);
 }
-
-function createPerson(name, age) {
-  let printName = function () {
-    console.log(this.name);
-  };
-  return { name, age, printName };
-}
-
-let axel = createPerson("Axel", 30);
-
-axel.printName();
