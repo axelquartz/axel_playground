@@ -2352,9 +2352,96 @@
 //   console.log(`The key is ${val}, and the value is ${axel[val]}`);
 // }
 
-let names = ["Pepe", "Rau", "Erickssen", "Ramona"];
+// let names = ["Pepe", "Rau", "Erickssen", "Ramona"];
 
-while (names.length > 0) {
-  console.log(names.shift());
-  console.log(names);
+// while (names.length > 0) {
+//   console.log(names.shift());
+//   console.log(names);
+// }
+
+// let names = ["Pepe", "Rau", "Erickssen", "Ramona"];
+// // let i = 0;
+
+// // do {
+// //   console.log(names[i]);
+// //   i++;
+// // } while (i < names.length);
+
+// do {
+//   console.log(names);
+// } while (names.length > 10);
+// let calcPrice = (price, discount) => price * ((100 - discount) * 0.01);
+
+// console.log(calcPrice(700, 35));
+
+// function generateNum1() {
+//   return 2 + 12;
+// }
+
+// function addNums(generateNum1, c) {
+//   return generateNum1 + c;
+// }
+
+// console.log(addNums(generateNum1, 7));
+
+// function nameA() {
+//   return "Axel";
+// }
+
+// function nameComplete() {
+//   return `Hello, my name is ${nameA()} Robles`;
+// }
+
+// console.log(nameComplete(nameA()));
+
+// function basis() {
+//   return "Axel";
+// }
+
+// let person = {
+//   name: "Erick",
+//   age: 30,
+// };
+
+// basis.call(person);
+
+// console.log(basis.call(person));
+
+// function printName() {
+//   function printFirstName() {
+//     return "Axel";
+//   }
+//   function printLastName() {
+//     return "Robles";
+//   }
+
+//   return `${printFirstName()} ${printLastName()}`;
+// }
+
+// printName();
+
+// const person = {
+//   name: "Erick",
+//   age: 30,
+//   message: function () {
+//     return `Hello, my name is ${this.name} and I'm ${this.age} years old`;
+//   },
+// };
+
+// console.log(person.message());
+const productName = "Monitor de 20 pulgadas";
+const price = "$300";
+const available = true;
+
+function productDetails() {
+  const productName = "Macbook Pro";
+  const price = "$1000";
+  return {
+    productName,
+    price,
+    available,
+  };
 }
+
+console.log(productDetails());
+console.log(productName, price, available);
