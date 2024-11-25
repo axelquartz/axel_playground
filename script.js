@@ -2429,19 +2429,31 @@
 // };
 
 // console.log(person.message());
-const productName = "Monitor de 20 pulgadas";
-const price = "$300";
-const available = true;
+// const productName = "Monitor de 20 pulgadas";
+// const price = "$300";
+// const available = true;
 
-function productDetails() {
-  const productName = "Macbook Pro";
-  const price = "$1000";
-  return {
-    productName,
-    price,
-    available,
-  };
+// function productDetails() {
+//   const productName = "Macbook Pro";
+//   const price = "$1000";
+//   return {
+//     productName,
+//     price,
+//     available,
+//   };
+// }
+
+// console.log(productDetails());
+// console.log(productName, price, available);
+
+function outerFunction() {
+  let outer = "Outer";
+  function innerFunction() {
+    let inner = "Inner";
+    console.log(`Outer: ${outer}, Inner: ${inner}`);
+  }
+  return innerFunction;
 }
 
-console.log(productDetails());
-console.log(productName, price, available);
+const closureExample = outerFunction();
+closureExample();
