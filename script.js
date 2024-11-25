@@ -2446,14 +2446,75 @@
 // console.log(productDetails());
 // console.log(productName, price, available);
 
-function outerFunction() {
-  let outer = "Outer";
-  function innerFunction() {
-    let inner = "Inner";
-    console.log(`Outer: ${outer}, Inner: ${inner}`);
-  }
-  return innerFunction;
-}
+// function outerFunction() {
+//   let outer = "Outer";
+//   function innerFunction() {
+//     let inner = "Inner";
+//     console.log(`Outer: ${outer}, Inner: ${inner}`);
+//   }
+//   return innerFunction;
+// }
 
-const closureExample = outerFunction();
-closureExample();
+// const closureExample = outerFunction();
+// closureExample();
+// function createCounter() {
+//   let count = 0;
+//   console.log(count);
+
+//   return function () {
+//     count++;
+//     console.log(count);
+//   };
+// }
+
+// let printCounter = createCounter();
+// printCounter();
+// printCounter();
+// printCounter();
+
+// let printCounter2 = createCounter();
+// printCounter2();
+// printCounter2();
+// printCounter2();
+
+// const axelArr = new Array(Number(1));
+
+// console.log(axelArr);
+
+// let arrName = ["Axel", "Erick", "Robles"];
+
+// console.log(Array.isArray(arrName));
+
+// const arrNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const arrNums2 = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+// function sumArray(arr) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//     console.log(sum);
+//   }
+//   return sum;
+// }
+
+// console.log(sumArray(arrNums2));
+
+// const cities = ["Bogota", "Medellin", "Cali", "Barranquilla", "Cartagena"];
+// // const newCities = cities.push("CDMX", "Mexico City", "Monterrey", "Guadalajara", "Tijuana");
+
+// // console.log(cities.pop());
+// // console.log(newCities);
+// // console.log(cities);
+
+// const newCities =
+
+// const arrNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let tripleNums = arrNums.forEach((el) => {
+//   return el * 3;
+// });
+
+// console.log(tripleNums);
+// const iteratedNumbers = arrNums.forEach((el) => console.log(el + 8));
+
+// console.log(iteratedNumbers);
