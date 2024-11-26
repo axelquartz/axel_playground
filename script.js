@@ -2518,3 +2518,59 @@
 // const iteratedNumbers = arrNums.forEach((el) => console.log(el + 8));
 
 // console.log(iteratedNumbers);
+// const whitePerson = [98];
+
+// const toBrownPerson = whitePerson.map((person) => person * 0.8);
+// const toBlackPerson = whitePerson.map((person) => person * 0.7);
+// const toIndianPerson = whitePerson.map((person) => person * 0.4);
+
+// console.log(toBrownPerson);
+// console.log(toBlackPerson);
+// console.log(toIndianPerson);
+
+// let arrLetters = ["a", "b", "b", "b", "c", "d", "d", "e"];
+
+// let sum = 0;
+
+// arrNums.forEach((el) => {
+//   sum += el;
+// });
+
+// console.log(sum);
+
+// const filterArr = arrNums.filter((el) => {
+//   return el % 2 === 0;
+// });
+
+// console.log(filterArr);
+
+// const sumArr = arrNums.reduce((acc, el) => {
+
+// });
+
+// console.log(sumArr);
+// const fourFinder = arrNums.reduce((acc, num) => {
+//   if (acc[num]) {
+//     acc[num]++;
+//   } else {
+//     acc[num] = 1;
+//   }
+//   return acc;
+// }, {});
+
+// console.log(fourFinder);
+
+// let arrLetters = ["a", "b", "b", "b", "c", "d", "d", "e"];
+
+let Letters = ["a", "b", "b", "b", "c", "d", "e"];
+
+const letterFrecuency = Letters.reduce((acc, el) => {
+  if (acc[el]) {
+    acc[el]++;
+  } else {
+    acc[el] = 1;
+  }
+  return acc;
+}, {});
+
+console.log(letterFrecuency);
