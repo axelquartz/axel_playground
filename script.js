@@ -2588,6 +2588,12 @@
 
 const names = ["Axel", "Erick", "Robles", "Victor", "Gunn", "Rafa", "Nadal"];
 
-const someNames = names.slice();
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-console.log(someNames);
+// const someNames = names.slice();
+
+// console.log(someNames);
+const mergedArr = [...names, ...numbers];
+const extraNames = [...names, "Duluio", "Amorebiera", "Gianluca"];
+
+console.log(mergedArr, extraNames);
