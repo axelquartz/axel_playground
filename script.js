@@ -2562,15 +2562,32 @@
 
 // let arrLetters = ["a", "b", "b", "b", "c", "d", "d", "e"];
 
-let Letters = ["a", "b", "b", "b", "c", "d", "e"];
+// let Letters = ["a", "b", "b", "b", "c", "d", "e"];
 
-const letterFrecuency = Letters.reduce((acc, el) => {
-  if (acc[el]) {
-    acc[el]++;
-  } else {
-    acc[el] = 1;
-  }
-  return acc;
-}, {});
+// const letterFrecuency = Letters.reduce((acc, el) => {
+//   if (acc[el]) {
+//     acc[el]++;
+//   } else {
+//     acc[el] = 1;
+//   }
+//   return acc;
+// }, {});
 
-console.log(letterFrecuency);
+// console.log(letterFrecuency);
+
+// const arrNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const numGreaterThan5 = arrNums.findIndex((el) => el > 5);
+
+// console.log(numGreaterThan5);
+// const arrNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const twoToSix = arrNums.slice(1, 6);
+
+// console.log(twoToSix);
+
+const names = ["Axel", "Erick", "Robles", "Victor", "Gunn", "Rafa", "Nadal"];
+
+const someNames = names.slice();
+
+console.log(someNames);
