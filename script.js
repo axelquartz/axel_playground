@@ -2586,14 +2586,51 @@
 
 // console.log(twoToSix);
 
-const names = ["Axel", "Erick", "Robles", "Victor", "Gunn", "Rafa", "Nadal"];
+// const names = ["Axel", "Erick", "Robles", "Victor", "Gunn", "Rafa", "Nadal"];
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// const someNames = names.slice();
+// // const someNames = names.slice();
 
-// console.log(someNames);
-const mergedArr = [...names, ...numbers];
-const extraNames = [...names, "Duluio", "Amorebiera", "Gianluca"];
+// // console.log(someNames);
+// const mergedArr = [...names, ...numbers];
+// const extraNames = [...names, "Duluio", "Amorebiera", "Gianluca"];
 
-console.log(mergedArr, extraNames);
+// console.log(mergedArr, extraNames);
+
+// const parArr = [1, 2, 3];
+
+// function sumAll(a, b, c) {
+//   return a + b + c;
+// }
+
+// console.log(sumAll(...parArr));
+
+// const axel = {
+//   name: "Axel",
+//   age: 30,
+//   weight: 93,
+//   skinColor: "brown",
+//   sausageSize: 18,
+// };
+
+// delete axel.sausageSize;
+
+// console.log(axel);
+
+function Persona(name, age, height, weight) {
+  this.name = name;
+  this.age = age;
+  this.weight = weight;
+  this.height = height;
+}
+
+Persona.prototype.skinColor = "Brown";
+
+Persona.prototype.hello = function () {
+  console.log(`Hello, my name is ${this.name}, my age is ${this.age}, my weight is ${this.weight}, and Im ${this.height}m height. My skincolor is ${this.skinColor}`);
+};
+
+const axel = new Persona("Axel", 30, 183, 92);
+
+console.log(axel.hello);
