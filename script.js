@@ -2650,34 +2650,115 @@
 
 // console.log(axel.hello());
 
-class Device {
-  constructor(type, brand, price) {
-    this.type = type;
-    this.brand = brand;
-    this.price = price;
-  }
-  printProduct() {
-    console.log(`Type: ${this.type}, Brand: ${this.brand}, Price: ${this.price} USD`);
+// class Device {
+//   constructor(type, brand, price) {
+//     this.type = type;
+//     this.brand = brand;
+//     this.price = price;
+//   }
+//   printProduct() {
+//     console.log(`Type: ${this.type}, Brand: ${this.brand}, Price: ${this.price} USD`);
+//   }
+// }
+
+// // const macBook2020 = new Device("Laptop", "Apple", 4000);
+
+// class Phone extends Device {
+//   constructor(type, brand, price, os, resolution) {
+//     super(type, brand, price);
+//     this.os = os;
+//     this.resolution = resolution;
+//   }
+//   printProduct() {
+//     console.log(`Brand: ${this.brand}, Price: ${this.price} USD, OS: ${this.os}, Resolution: ${this.resolution}`);
+//   }
+// }
+
+// const iPhone12 = new Phone("Phone", "Apple", 6000, "iOS", "6.5");
+// const braviaTv = new Device("TV", "Sony", 3000);
+// Phone.prototype.printPrice = function () {
+//   console.log(`Price: ${this.price} USD`);
+// };
+
+// iPhone12.printPrice();
+
+// const userBase = ["axelquartz", "lulaSiva", "arcangelu323", "lol2020", "ErimeErima"];
+// const passwordBase = ["1234", "543543543", "32543543", "6547455", "453243243"];
+
+// let userName = prompt("Username");
+
+// for (let i = 0; i < userBase.length; i++) {
+//   if (userName == userBase[i]) {
+//     let password = prompt("Password");
+
+//     for (let j = 0; j < passwordBase.length; j++) {
+//       if (password == passwordBase[j]) {
+//         alert("Welcome");
+//         break; // Add this line to break out of the inner loop
+//       }
+//     }
+//     break; // Add this line to break out of the outer loop after a valid username and password combination is found
+//   }
+// }
+
+// const userName = "axelquartz";
+// // const password = prompt("Password");
+
+// if (userName === "axelquartz") {
+//   alert("Welcome");
+// }
+
+const usersDatabase = [
+  {
+    username: "andres",
+    password: "123",
+  },
+  {
+    username: "caro",
+    password: "456",
+  },
+  {
+    username: "mariana",
+    password: "789",
+  },
+];
+
+const usersTimeline = [
+  {
+    username: "Estefany",
+    timeline: "Me encata Javascript!",
+  },
+  {
+    username: "Oscar",
+    timeline: "Bebeloper es lo mejor!",
+  },
+  {
+    username: "Mariana",
+    timeline: "A mi me gusta mÃ¡s el cafÃ© que el tÃ©",
+  },
+  {
+    username: "Andres",
+    timeline: "Yo hoy no quiero trabajar",
+  },
+];
+
+const userName = prompt("Username");
+const password = prompt("Password");
+
+let userAccess;
+
+for (let i = 0; i < usersDatabase.length; i++) {
+  if (userName == usersDatabase[i].username && password == usersDatabase[i].password) {
+    userAccess = true;
+    console.log("YES");
+    // Execute code for a valid user
+    for (let el of usersTimeline) {
+      console.log(el.username + ": " + el.timeline);
+      console.log("---");
+    }
   }
 }
 
-// const macBook2020 = new Device("Laptop", "Apple", 4000);
-
-class Phone extends Device {
-  constructor(type, brand, price, os, resolution) {
-    super(type, brand, price);
-    this.os = os;
-    this.resolution = resolution;
-  }
-  printProduct() {
-    console.log(`Brand: ${this.brand}, Price: ${this.price} USD, OS: ${this.os}, Resolution: ${this.resolution}`);
-  }
+if (!userAccess) {
+  console.log("NO");
 }
-
-const iPhone12 = new Phone("Phone", "Apple", 6000, "iOS", "6.5");
-const braviaTv = new Device("TV", "Sony", 3000);
-
-iPhone12.printProduct();
-console.log("-----------------");
-
-braviaTv.printProduct();
