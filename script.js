@@ -2812,12 +2812,44 @@
 //     .catch((failed) => console.log(failed));
 // }
 
+// async function fetchPokeApi() {
+//   try {
+//     let response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+//     let data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
 async function fetchData() {
   try {
-    let response = await fetch("https://rickandmortyapi.com/api/character");
+    let response = await fetch(apiUrls[0]);
     let data = await response.json();
     console.log(data);
   } catch (err) {
     console.log(err);
   }
+}
+
+const apiUrls = ["https://rickandmortyapi.com/api/character", "https://rickandmortyapi.com/api/location", "https://rickandmortyapi.com/api/episode"];
+
+async function fetchNewData() {
+  try {
+    for await (let url of apiUrls) {
+      let response = await fetch(url);
+      let data = await response.json();
+      console.log(data);
+    }
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+async function fetchPokeRestApi() {
+  try {
+    let response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+    let data = await response.json();
+    console.log(data);
+  } catch (err) {}
 }
