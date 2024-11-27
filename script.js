@@ -2763,40 +2763,61 @@
 //   console.log("NO");
 // }
 
-const axelPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let operationSuccessful = true;
-    if (operationSuccessful) {
-      resolve("Operation successful");
-    } else {
-      reject("Operation failed");
-    }
-  }, 6000);
-});
+// const axelPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     let operationSuccessful = true;
+//     if (operationSuccessful) {
+//       resolve("Operation successful");
+//     } else {
+//       reject("Operation failed");
+//     }
+//   }, 6000);
+// });
 
-axelPromise.then((successMessage) => {
-  console.log(successMessage);
-});
+// axelPromise.then((successMessage) => {
+//   console.log(successMessage);
+// });
 
-axelPromise.catch((errorMessage) => {
-  console.log(errorMessage);
-});
+// axelPromise.catch((errorMessage) => {
+//   console.log(errorMessage);
+// });
 
-const altPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    const promiseState = true;
-    if (promiseState == true) {
-      resolve("altPromise successful");
-    } else {
-      reject("altPromise failed. Non action");
-    }
-  }, 4000);
-});
+// const altPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const promiseState = true;
+//     if (promiseState == true) {
+//       resolve(fetch("https://rickandmortyapi.com/api/character"));
+//     } else {
+//       reject("altPromise failed. Non action");
+//     }
+//   }, 4000);
+// });
 
-altPromise
-  .then((successMessage) => {
-    console.log(successMessage);
-  })
-  .catch((failMessage) => {
-    console.log(failMessage);
-  });
+// altPromise
+//   .then((success) => {
+//     console.log(success);
+//   })
+//   .catch((fail) => {
+//     console.log(fail);
+//   });
+
+// function fetchData() {
+//   fetch("https://rickandmortyapi.com/api/character")
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((data) => {
+//       console.log(data.results);
+//     })
+//     .catch((failed) => console.log(failed));
+// }
+
+async function fetchData() {
+  try {
+    let response = await fetch("https://rickandmortyapi.com/api/character");
+    let data = await response.json();
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
