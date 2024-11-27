@@ -2618,19 +2618,66 @@
 
 // console.log(axel);
 
-function Persona(name, age, height, weight) {
-  this.name = name;
-  this.age = age;
-  this.weight = weight;
-  this.height = height;
+// function Persona(name, age, height, weight) {
+//   this.name = name;
+//   this.age = age;
+//   this.weight = weight;
+//   this.height = height;
+// }
+
+// Persona.prototype.skinColor = "Brown";
+
+// Persona.prototype.hello = function () {
+//   console.log(`Hello, my name is ${this.name}, my age is ${this.age}, my weight is ${this.weight}, and Im ${this.height}m height. My skincolor is ${this.skinColor}`);
+// };
+
+// const axel = new Persona("Axel", 30, 183, 92);
+
+// console.log(axel.hello);
+
+// class Person {
+//   constructor(name, age, height) {
+//     this.name = name;
+//     this.age = age;
+//     this.height = height;
+//   }
+//   hello() {
+//     console.log(`Hello, my name is ${this.name}, my age is ${this.age}, and my height is ${this.height}`);
+//   }
+// }
+
+// const axel = new Person("Axel", 30, 1.83);
+
+// console.log(axel.hello());
+
+class Device {
+  constructor(type, brand, price) {
+    this.type = type;
+    this.brand = brand;
+    this.price = price;
+  }
+  printProduct() {
+    console.log(`Type: ${this.type}, Brand: ${this.brand}, Price: ${this.price} USD`);
+  }
 }
 
-Persona.prototype.skinColor = "Brown";
+// const macBook2020 = new Device("Laptop", "Apple", 4000);
 
-Persona.prototype.hello = function () {
-  console.log(`Hello, my name is ${this.name}, my age is ${this.age}, my weight is ${this.weight}, and Im ${this.height}m height. My skincolor is ${this.skinColor}`);
-};
+class Phone extends Device {
+  constructor(type, brand, price, os, resolution) {
+    super(type, brand, price);
+    this.os = os;
+    this.resolution = resolution;
+  }
+  printProduct() {
+    console.log(`Brand: ${this.brand}, Price: ${this.price} USD, OS: ${this.os}, Resolution: ${this.resolution}`);
+  }
+}
 
-const axel = new Persona("Axel", 30, 183, 92);
+const iPhone12 = new Phone("Phone", "Apple", 6000, "iOS", "6.5");
+const braviaTv = new Device("TV", "Sony", 3000);
 
-console.log(axel.hello);
+iPhone12.printProduct();
+console.log("-----------------");
+
+braviaTv.printProduct();
