@@ -2708,57 +2708,95 @@
 //   alert("Welcome");
 // }
 
-const usersDatabase = [
-  {
-    username: "andres",
-    password: "123",
-  },
-  {
-    username: "caro",
-    password: "456",
-  },
-  {
-    username: "mariana",
-    password: "789",
-  },
-];
+// const usersDatabase = [
+//   {
+//     username: "andres",
+//     password: "123",
+//   },
+//   {
+//     username: "caro",
+//     password: "456",
+//   },
+//   {
+//     username: "mariana",
+//     password: "789",
+//   },
+// ];
 
-const usersTimeline = [
-  {
-    username: "Estefany",
-    timeline: "Me encata Javascript!",
-  },
-  {
-    username: "Oscar",
-    timeline: "Bebeloper es lo mejor!",
-  },
-  {
-    username: "Mariana",
-    timeline: "A mi me gusta mÃ¡s el cafÃ© que el tÃ©",
-  },
-  {
-    username: "Andres",
-    timeline: "Yo hoy no quiero trabajar",
-  },
-];
+// const usersTimeline = [
+//   {
+//     username: "Estefany",
+//     timeline: "Me encata Javascript!",
+//   },
+//   {
+//     username: "Oscar",
+//     timeline: "Bebeloper es lo mejor!",
+//   },
+//   {
+//     username: "Mariana",
+//     timeline: "A mi me gusta mÃ¡s el cafÃ© que el tÃ©",
+//   },
+//   {
+//     username: "Andres",
+//     timeline: "Yo hoy no quiero trabajar",
+//   },
+// ];
 
-const userName = prompt("Username");
-const password = prompt("Password");
+// const userName = prompt("Username");
+// const password = prompt("Password");
 
-let userAccess;
+// let userAccess;
 
-for (let i = 0; i < usersDatabase.length; i++) {
-  if (userName == usersDatabase[i].username && password == usersDatabase[i].password) {
-    userAccess = true;
-    console.log("YES");
-    // Execute code for a valid user
-    for (let el of usersTimeline) {
-      console.log(el.username + ": " + el.timeline);
-      console.log("---");
+// for (let i = 0; i < usersDatabase.length; i++) {
+//   if (userName == usersDatabase[i].username && password == usersDatabase[i].password) {
+//     userAccess = true;
+//     console.log("YES");
+//     // Execute code for a valid user
+//     for (let el of usersTimeline) {
+//       console.log(el.username + ": " + el.timeline);
+//       console.log("---");
+//     }
+//   }
+// }
+
+// if (!userAccess) {
+//   console.log("NO");
+// }
+
+const axelPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let operationSuccessful = true;
+    if (operationSuccessful) {
+      resolve("Operation successful");
+    } else {
+      reject("Operation failed");
     }
-  }
-}
+  }, 6000);
+});
 
-if (!userAccess) {
-  console.log("NO");
-}
+axelPromise.then((successMessage) => {
+  console.log(successMessage);
+});
+
+axelPromise.catch((errorMessage) => {
+  console.log(errorMessage);
+});
+
+const altPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const promiseState = true;
+    if (promiseState == true) {
+      resolve("altPromise successful");
+    } else {
+      reject("altPromise failed. Non action");
+    }
+  }, 4000);
+});
+
+altPromise
+  .then((successMessage) => {
+    console.log(successMessage);
+  })
+  .catch((failMessage) => {
+    console.log(failMessage);
+  });
