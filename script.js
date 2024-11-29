@@ -2822,34 +2822,263 @@
 //   }
 // }
 
-async function fetchData() {
-  try {
-    let response = await fetch(apiUrls[0]);
-    let data = await response.json();
-    console.log(data);
-  } catch (err) {
-    console.log(err);
+// async function fetchData() {
+//   try {
+//     let response = await fetch(apiUrls[0]);
+//     let data = await response.json();
+//     console.log(data);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+// const apiUrls = ["https://rickandmortyapi.com/api/character", "https://rickandmortyapi.com/api/location", "https://rickandmortyapi.com/api/episode"];
+
+// async function fetchNewData() {
+//   try {
+//     for await (let url of apiUrls) {
+//       let response = await fetch(url);
+//       let data = await response.json();
+//       console.log(data);
+//     }
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+// async function fetchPokeRestApi() {
+//   try {
+//     let response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+//     let data = await response.json();
+//     console.log(data);
+//   } catch (err) {}
+// }
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
+
+// const listElement = document.querySelector(".posts");
+// const postTemplate = document.getElementById("single-post");
+// const form = document.querySelector("#new-post form");
+// const fetchButton = document.querySelector("#available-posts button");
+// const postList = document.querySelector("#posts-container");
+
+// function sendHTTPRequest(method, url, data) {
+//   return fetch(url, {
+//     method: method,
+//     body: JSON.stringify(data),
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   }).then((response) => {
+//     return response.json();
+//   });
+// }
+
+// async function fetchPost() {
+//   const responseData = await sendHTTPRequest("GET", "https://jsonplaceholder.typicode.com/posts");
+//   console.log(responseData);
+//   const listOfPosts = responseData;
+
+//   for (const post of listOfPosts) {
+//     const postContainer = document.createElement("article");
+//     postContainer.id = post.id;
+//     postContainer.classList.add("post-item");
+
+//     const title = document.createElement("h2");
+//     title.textContent = post.title;
+
+//     const body = document.createElement("p");
+//     body.textContent = post.body;
+
+//     const button = document.createElement("button");
+//     button.textContent = "DELETE Content";
+
+//     postContainer.append(title);
+//     postContainer.append(body);
+//     postContainer.append(button);
+
+//     listElement.append(postContainer);
+//   }
+// }
+
+// fetchButton.addEventListener("click", fetchPost);
+
+// const axelPromise = new Promise((resolve, reject) => {
+//   resolve(fetch("https://jsonplaceholder.typicode.com/posts"));
+//   reject("Promise failed");
+// });
+
+// axelPromise
+//   .then((sucess) => {
+//     return sucess.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// async function axelFetch() {
+//   try {
+//     let response = await fetch("https://jsonplaceholder.typicode.com/posts");
+//     let data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// const urls = ["https://jsonplaceholder.typicode.com/posts", "https://jsonplaceholder.typicode.com/users", "https://jsonplaceholder.typicode.com/albums"];
+
+// async function axelFetch() {
+//   try {
+//     for await (url of urls) {
+//       const response = await fetch(url);
+//       const data = await response.json();
+//       console.log(data);
+//     }
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
+
+// --------------------------------------------------------------------------------------------------------------------------
+
+// async function newFetch() {
+//   try {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// const listElement = document.querySelector(".posts");
+// const postTemplate = document.getElementById("single-post");
+// const form = document.querySelector("#new-post form");
+// const fetchButton = document.querySelector("#available-posts button");
+// const postList = document.querySelector("#posts-container");
+
+// // Funcion para hacer las peticiones
+// function sendHTTPRequest(method, url, data) {
+//   return fetch(url, {
+//     method: method,
+//     body: JSON.stringify(data),
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   }).then((response) => {
+//     return response.json();
+//   });
+// }
+
+// // async function fetchPosts() {
+// //   const responseData = await sendHTTPRequest("GET", "https://jsonplaceholder.typicode.com/posts");
+// //   console.log(responseData);
+// // }
+
+// async function testFetch() {
+//   try {
+//     const response = await sendHTTPRequest("GET", "https://jsonplaceholder.typicode.com/posts");
+//     console.log(response);
+//   } catch (err) {
+//     console.log(err);
+//   }
+//   let listOfPosts = response;
+
+//   for (const post of listOfPosts) {
+//     const postContainer = document.createElement("article");
+//     postContainer.id = post.id;
+//     postContainer.classList.add("post-item");
+
+//     const title = document.createElement("h2");
+//     title.textContent = post.title;
+
+//     const body = document.createElement("p");
+//     body.textContent = post.body;
+
+//     const button = document.createElement("button");
+//     button.textContent = "DELETE Content";
+
+//     postContainer.append(title);
+//     postContainer.append(body);
+//     postContainer.append(button);
+
+//     listElement.append(postContainer);
+//   }
+// }
+
+// fetchButton.addEventListener("click", testFetch);
+
+const listElement = document.querySelector(".posts");
+const postTemplate = document.getElementById("single-post");
+const form = document.querySelector("#new-post form");
+const fetchButton = document.querySelector("#available-posts button");
+const postList = document.querySelector("#posts-container");
+
+function sendHTTPRequest(method, url, data) {
+  return fetch(url, {
+    method: method,
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((response) => {
+    return response.json();
+  });
+}
+
+async function fetchPost() {
+  const responseData = await sendHTTPRequest("GET", "https://jsonplaceholder.typicode.com/posts");
+  console.log(responseData);
+  const listOfPosts = responseData;
+
+  for (const post of listOfPosts) {
+    const postContainer = document.createElement("article");
+    postContainer.id = post.id;
+    postContainer.classList.add("post-item");
+
+    const title = document.createElement("h2");
+    title.textContent = post.title;
+
+    const body = document.createElement("p");
+    body.textContent = post.body;
+
+    const button = document.createElement("button");
+    button.textContent = "DELETE Content";
+
+    postContainer.append(title);
+    postContainer.append(postContainer.id);
+    postContainer.append(body);
+    postContainer.append(button);
+
+    listElement.append(postContainer);
   }
 }
 
-const apiUrls = ["https://rickandmortyapi.com/api/character", "https://rickandmortyapi.com/api/location", "https://rickandmortyapi.com/api/episode"];
+fetchButton.addEventListener("click", fetchPost);
 
-async function fetchNewData() {
-  try {
-    for await (let url of apiUrls) {
-      let response = await fetch(url);
-      let data = await response.json();
-      console.log(data);
-    }
-  } catch (err) {
-    console.log(err);
-  }
+async function createPost(title, content) {
+  const userId = Math.random();
+  const post = {
+    title: title,
+    body: content,
+    userId: userId,
+  };
+  sendHTTPRequest("POST", "https://jsonplaceholder.typicode.com/posts", post);
 }
 
-async function fetchPokeRestApi() {
-  try {
-    let response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
-    let data = await response.json();
-    console.log(data);
-  } catch (err) {}
-}
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const title = event.currentTarget.title.value;
+  const content = event.currentTarget.content.value;
+  createPost(title, content);
+});
