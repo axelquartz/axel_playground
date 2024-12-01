@@ -3038,7 +3038,7 @@ function sendHTTPRequest(method, url, data) {
 
 async function fetchPost() {
   const responseData = await sendHTTPRequest("GET", "https://jsonplaceholder.typicode.com/posts");
-  console.log(responseData);
+  console.log(responseData[0].body);
   const listOfPosts = responseData;
 
   for (const post of listOfPosts) {
@@ -3082,3 +3082,28 @@ form.addEventListener("submit", (event) => {
   const content = event.currentTarget.content.value;
   createPost(title, content);
 });
+
+postList.addEventListener("click", (event) => {
+  if (event.target.tagName === "BUTTON") {
+    const postId = event.target.closest("article").id;
+    console.log(postId);
+
+    sendHTTPRequest("DELETE", `https://jsonplaceholder.typicode.com/posts/${postId}`);
+  }
+});
+
+// const testPromises = new Promise((resolve, reject) => {
+//   resolve(fetch("https://jsonplaceholder.typicode.com/posts"));
+//   reject("Promise failed");
+// });
+
+// testPromises
+//   .then((sucess) => {
+//     return sucess.json();
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
