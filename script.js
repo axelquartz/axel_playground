@@ -3018,79 +3018,79 @@
 
 // fetchButton.addEventListener("click", testFetch);
 
-const listElement = document.querySelector(".posts");
-const postTemplate = document.getElementById("single-post");
-const form = document.querySelector("#new-post form");
-const fetchButton = document.querySelector("#available-posts button");
-const postList = document.querySelector("#posts-container");
+// const listElement = document.querySelector(".posts");
+// const postTemplate = document.getElementById("single-post");
+// const form = document.querySelector("#new-post form");
+// const fetchButton = document.querySelector("#available-posts button");
+// const postList = document.querySelector("#posts-container");
 
-function sendHTTPRequest(method, url, data) {
-  return fetch(url, {
-    method: method,
-    body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }).then((response) => {
-    return response.json();
-  });
-}
+// function sendHTTPRequest(method, url, data) {
+//   return fetch(url, {
+//     method: method,
+//     body: JSON.stringify(data),
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   }).then((response) => {
+//     return response.json();
+//   });
+// }
 
-async function fetchPost() {
-  const responseData = await sendHTTPRequest("GET", "https://jsonplaceholder.typicode.com/posts");
-  console.log(responseData[0].body);
-  const listOfPosts = responseData;
+// async function fetchPost() {
+//   const responseData = await sendHTTPRequest("GET", "https://jsonplaceholder.typicode.com/posts");
+//   console.log(responseData[0].body);
+//   const listOfPosts = responseData;
 
-  for (const post of listOfPosts) {
-    const postContainer = document.createElement("article");
-    postContainer.id = post.id;
-    postContainer.classList.add("post-item");
+//   for (const post of listOfPosts) {
+//     const postContainer = document.createElement("article");
+//     postContainer.id = post.id;
+//     postContainer.classList.add("post-item");
 
-    const title = document.createElement("h2");
-    title.textContent = post.title;
+//     const title = document.createElement("h2");
+//     title.textContent = post.title;
 
-    const body = document.createElement("p");
-    body.textContent = post.body;
+//     const body = document.createElement("p");
+//     body.textContent = post.body;
 
-    const button = document.createElement("button");
-    button.textContent = "DELETE Content";
+//     const button = document.createElement("button");
+//     button.textContent = "DELETE Content";
 
-    postContainer.append(title);
-    postContainer.append(postContainer.id);
-    postContainer.append(body);
-    postContainer.append(button);
+//     postContainer.append(title);
+//     postContainer.append(postContainer.id);
+//     postContainer.append(body);
+//     postContainer.append(button);
 
-    listElement.append(postContainer);
-  }
-}
+//     listElement.append(postContainer);
+//   }
+// }
 
-fetchButton.addEventListener("click", fetchPost);
+// fetchButton.addEventListener("click", fetchPost);
 
-async function createPost(title, content) {
-  const userId = Math.random();
-  const post = {
-    title: title,
-    body: content,
-    userId: userId,
-  };
-  sendHTTPRequest("POST", "https://jsonplaceholder.typicode.com/posts", post);
-}
+// async function createPost(title, content) {
+//   const userId = Math.random();
+//   const post = {
+//     title: title,
+//     body: content,
+//     userId: userId,
+//   };
+//   sendHTTPRequest("POST", "https://jsonplaceholder.typicode.com/posts", post);
+// }
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const title = event.currentTarget.title.value;
-  const content = event.currentTarget.content.value;
-  createPost(title, content);
-});
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   const title = event.currentTarget.title.value;
+//   const content = event.currentTarget.content.value;
+//   createPost(title, content);
+// });
 
-postList.addEventListener("click", (event) => {
-  if (event.target.tagName === "BUTTON") {
-    const postId = event.target.closest("article").id;
-    console.log(postId);
+// postList.addEventListener("click", (event) => {
+//   if (event.target.tagName === "BUTTON") {
+//     const postId = event.target.closest("article").id;
+//     console.log(postId);
 
-    sendHTTPRequest("DELETE", `https://jsonplaceholder.typicode.com/posts/${postId}`);
-  }
-});
+//     sendHTTPRequest("DELETE", `https://jsonplaceholder.typicode.com/posts/${postId}`);
+//   }
+// });
 
 // const testPromises = new Promise((resolve, reject) => {
 //   resolve(fetch("https://jsonplaceholder.typicode.com/posts"));
@@ -3107,3 +3107,29 @@ postList.addEventListener("click", (event) => {
 //   .catch((error) => {
 //     console.log(error);
 //   });
+
+const row = document.querySelectorAll(".row");
+
+console.log(row);
+
+// const container = document.getElementsByClassName("container")[0];
+// const children = container.children;
+// const firstChild = container.firstElementChild;
+
+// row.forEach((element) => {
+//   element.style = "background-color: red";
+// });
+
+// for (const el of row) {
+//   el.style = "background-color: blue";
+// }
+
+row.forEach((element) => {
+  element.addEventListener("click", () => {
+    element.closest("div").style = "background-color: red";
+  });
+});
+
+// row.addEventListener("click", () => {
+//   row.closest("div").style = "background-color: red";
+// });

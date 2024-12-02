@@ -2,33 +2,6 @@
 * {
   padding: 0;
   margin: 0;
-  color: pink;
-}
-
-.CONTAINER {
-  min-height: 100vh;
-  background-color: #cdcdcd;
-}
-
-.letters {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-size: 60px;
-}
-
-/* Add rules for the element 'p' present inside the class 'letters' using descendant selector */
-.letters p:hover {
-  text-align: center;
-  background-color: rgb(250, 150, 100);
-  width: 70px;
-  margin-right: 1.5px;
-  border-radius: 15%;
-  border-color: rgb(250, 125, 75);
-  border-style: solid;
-  animation: move 0.5s infinite linear;
 }
 
 @keyframes move {
@@ -41,4 +14,14 @@
   100% {
     transform: translateX(10000px);
   }
+}
+
+/* // DOM Manipulation */
+
+.container {
+  background-color: seashell;
+}
+
+.row {
+  border: 1px solid black;
 }
