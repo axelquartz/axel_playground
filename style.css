@@ -22,6 +22,19 @@
   background-color: seashell;
 }
 
+.border-container {
+  border: 1px solid black;
+  padding: 10px;
+}
+
 .row {
   border: 1px solid black;
+}
+
+.selected-row {
+  background-color: lightcoral;
+}
+
+.fixed-class {
+  background-color: darkgreen;
 }

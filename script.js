@@ -3110,9 +3110,15 @@
 
 const row = document.querySelectorAll(".row");
 
+// row.forEach((element) => {
+//   element.className = "fixed-class";
+// });
+
 console.log(row);
 
-// const container = document.getElementsByClassName("container")[0];
+const container = document.querySelector(".container");
+container.style = "background-color: orange";
+container.classList.add("border-container");
 // const children = container.children;
 // const firstChild = container.firstElementChild;
 
@@ -3124,11 +3130,19 @@ console.log(row);
 //   el.style = "background-color: blue";
 // }
 
+const newRow = document.createElement("div");
+newRow.classList.add("row");
+newRow.textContent = "Row 4";
+container.append(newRow);
+
 row.forEach((element) => {
   element.addEventListener("click", () => {
-    element.closest("div").style = "background-color: red";
+    element.closest("div").classList.toggle("selected-row");
   });
 });
+
+// row[row.length - 1].insertAdjacentElement("afterend", newRow);
+// row[row.length - 1].insertAdjacentHTML("afterend", "<h2>Row 5</h2>");
 
 // row.addEventListener("click", () => {
 //   row.closest("div").style = "background-color: red";
