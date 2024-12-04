@@ -35,6 +35,19 @@
   background-color: lightcoral;
 }
 
+.special-row {
+  background-color: lightblue;
+}
+
 .fixed-class {
   background-color: darkgreen;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+  background-color: red;
 }

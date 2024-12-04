@@ -3108,42 +3108,86 @@
 //     console.log(error);
 //   });
 
-const row = document.querySelectorAll(".row");
+// const row = document.querySelectorAll(".row");
 
-// row.forEach((element) => {
-//   element.className = "fixed-class";
-// });
+// // row.forEach((element) => {
+// //   element.className = "fixed-class";
+// // });
 
-console.log(row);
+// const container = document.querySelector(".container");
+// container.style = "background-color: orange";
+// container.classList.add("border-container");
+// // const children = container.children;
+// // const firstChild = container.firstElementChild;
 
-const container = document.querySelector(".container");
-container.style = "background-color: orange";
-container.classList.add("border-container");
-// const children = container.children;
-// const firstChild = container.firstElementChild;
+// // row.forEach((element) => {
+// //   element.style = "background-color: red";
+// // });
 
-// row.forEach((element) => {
-//   element.style = "background-color: red";
-// });
+// // for (const el of row) {
+// //   el.style = "background-color: blue";
+// // }
 
-// for (const el of row) {
-//   el.style = "background-color: blue";
-// }
-
-const newRow = document.createElement("div");
-newRow.classList.add("row");
-newRow.textContent = "Row 4";
-container.append(newRow);
-
-row.forEach((element) => {
-  element.addEventListener("click", () => {
-    element.closest("div").classList.toggle("selected-row");
-  });
-});
+// const newRow = document.createElement("div");
+// newRow.classList.add("row");
+// newRow.textContent = "Row 4N";
+// // container.append(newRow);
 
 // row[row.length - 1].insertAdjacentElement("afterend", newRow);
-// row[row.length - 1].insertAdjacentHTML("afterend", "<h2>Row 5</h2>");
+// container.insertAdjacentHTML("beforeend", "<div class='row'><h2>Row 5</h2></div>");
 
-// row.addEventListener("click", () => {
-//   row.closest("div").style = "background-color: red";
+// row.forEach((element) => {
+//   element.addEventListener("click", () => {
+//     element.closest("div").classList.toggle("selected-row");
+//     console.log(row);
+//   });
 // });
+
+// // row[row.length - 1].insertAdjacentHTML("afterend", "<h2>Row 5</h2>");
+
+// // row.addEventListener("click", () => {
+// //   row.closest("div").style = "background-color: red";
+// // });
+
+// const rowClassQuery = document.querySelectorAll(".row");
+// const rowClassClassName = document.getElementsByClassName("row");
+// // console.log(rowClassQuery);
+// // console.log(rowClassClassName);
+
+// rowClassQuery.forEach((element) => {
+//   element.addEventListener("click", () => {
+//     element.closest("div").classList.toggle("selected-row");
+//     console.log(rowClassQuery);
+//   });
+// });
+
+const parent = document.querySelector(".container");
+const children = document.querySelectorAll(".row");
+const child = parent.children;
+// const child2 = document.querySelector(".row");
+// const closer = child2.closest(".row");
+// const parent2 = child2.parentNode;
+// const firstChild = parent.firstElementChild;
+// const firstChildByIndex = parent.children[2];
+
+// console.log(parent);
+// console.log(parent2);
+// console.log(closer);
+// console.log(child);
+// console.log(firstChild);
+// console.log(firstChildByIndex);
+children[0].classList.add("special-row");
+
+children.forEach((element) =>
+  element.addEventListener("click", () => {
+    element.closest(".row").classList.toggle("selected-row");
+  })
+);
+
+h1 = document.querySelector("h1");
+const toggleVisibility = document.querySelector("button");
+
+toggleVisibility.addEventListener("click", () => {
+  h1.classList.toggle("hidden");
+  console.log(h1);
+});
