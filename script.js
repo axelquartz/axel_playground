@@ -3162,6 +3162,7 @@
 // });
 
 const parent = document.querySelector(".container");
+const container = document.querySelector(".container");
 const children = document.querySelectorAll(".row");
 const child = parent.children;
 // const child2 = document.querySelector(".row");
@@ -3176,7 +3177,7 @@ const child = parent.children;
 // console.log(child);
 // console.log(firstChild);
 // console.log(firstChildByIndex);
-children[0].classList.add("special-row");
+parent.insertAdjacentHTML("beforeend", "<div class='row'><h2>Row 5</h2></div>");
 
 children.forEach((element) =>
   element.addEventListener("click", () => {
@@ -3191,3 +3192,5 @@ toggleVisibility.addEventListener("click", () => {
   h1.classList.toggle("hidden");
   console.log(h1);
 });
+
+container.insertAdjacentHTML("afterend", "<div class='row'><h2>Row Adjacent</h2></div>");
