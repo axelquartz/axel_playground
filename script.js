@@ -3179,6 +3179,21 @@ const child = parent.children;
 // console.log(firstChildByIndex);
 parent.insertAdjacentHTML("beforeend", "<div class='row'><h2>Row 5</h2></div>");
 
+const specificRow = document.createElement("div");
+specificRow.classList.add("row");
+specificRow.textContent = "Specific Row";
+children[2].after(specificRow);
+children[2].after(specificRow.cloneNode(true));
+
+const replaceRow = document.getElementById("to-replace");
+
+const absoluteRow = document.createElement("div");
+absoluteRow.classList.add("row");
+absoluteRow.textContent = "Absolute Row";
+replaceRow.replaceWith(absoluteRow);
+
+// children[1].remove();
+
 children.forEach((element) =>
   element.addEventListener("click", () => {
     element.closest(".row").classList.toggle("selected-row");
@@ -3188,9 +3203,15 @@ children.forEach((element) =>
 h1 = document.querySelector("h1");
 const toggleVisibility = document.querySelector("button");
 
-toggleVisibility.addEventListener("click", () => {
-  h1.classList.toggle("hidden");
-  console.log(h1);
-});
+// toggleVisibility.addEventListener("click", () => {
+//   h1.classList.toggle("hidden");
+//   console.log(EventTarget);
+// });
 
-container.insertAdjacentHTML("afterend", "<div class='row'><h2>Row Adjacent</h2></div>");
+// container.insertAdjacentHTML("afterend", "<div class='row'><h2>Row Adjacent</h2></div>");
+
+const buttonClicked = (event) => {
+  console.log(event.target);
+};
+
+toggleVisibility.addEventListener("click", buttonClicked);

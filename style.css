@@ -20,6 +20,7 @@
 
 .container {
   background-color: seashell;
+  border: solid 2px blue;
 }
 
 .border-container {
