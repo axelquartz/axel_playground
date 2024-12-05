@@ -4,31 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
 
   <body>
-    <h1>Axel Playground</h1>
-    <button>Toggle Visibility</button>
-    <div id="app">
-      <div class="container">
-        <div class="row">
-          <h2>Axelupaun</h2>
-      </div>
-      <div class="row">
-        <h2>Recovita</h2>
-      </div>
-      <div class="row">
-        <h2>Axelupis</h2>
-      </div>
-      <div id="to-replace">
-        <h3>Replace me</h3>
-      </div>
-      <div class="row">
-        <h2>Axelupaun</h2> 
-      </div>
+    <div id="theme-toggle">
+      <button id="toggle-theme-btn">Toggle Theme</button>
     </div>
-    <h2>Something H2</h2>
+    <div id="task-manager">
+      <h1>Task Manager</h1>
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter a new task" required />
+        <button type="submit">Add Task</button>
+      </form>
+      <ul id="task-list">
+        <li>
+          Task Content
+          <span class="delete-btn">❌</span>
+          <span class="edit-btn">✏️</span>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>

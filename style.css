@@ -4,51 +4,55 @@
   margin: 0;
 }
 
-@keyframes move {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(200px);
-  }
-  100% {
-    transform: translateX(10000px);
-  }
-}
-
-/* // DOM Manipulation */
-
-.container {
-  background-color: seashell;
-  border: solid 2px blue;
-}
-
-.border-container {
-  border: 1px solid black;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   padding: 10px;
+  margin: 0;
 }
 
-.row {
-  border: 1px solid black;
+#task-manager {
+  background: #fff;
+  padding: 20px;
+  margin: auto;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.selected-row {
-  background-color: lightcoral;
+#task-form {
+  margin-bottom: 20px;
 }
 
-.special-row {
-  background-color: lightblue;
+#task-input {
+  padding: 10px;
+  width: 70%;
+  margin-right: 10px;
 }
 
-.fixed-class {
-  background-color: darkgreen;
+#task-list {
+  list-style-type: none;
+  padding: 0;
 }
 
-.visible {
-  display: block;
+#task-list li {
+  background: #eee;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
 }
 
-.hidden {
-  display: none;
-  background-color: red;
+/* Dark theme styles */
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme #task-manager {
+  background: #222;
+  color: #fff;
+}
+
+.dark-theme #task-list li {
+  background: #444;
 }

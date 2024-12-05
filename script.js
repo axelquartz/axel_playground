@@ -3161,10 +3161,10 @@
 //   });
 // });
 
-const parent = document.querySelector(".container");
-const container = document.querySelector(".container");
-const children = document.querySelectorAll(".row");
-const child = parent.children;
+// const parent = document.querySelector(".container");
+// const container = document.querySelector(".container");
+// const children = document.querySelectorAll(".row");
+// const child = parent.children;
 // const child2 = document.querySelector(".row");
 // const closer = child2.closest(".row");
 // const parent2 = child2.parentNode;
@@ -3177,41 +3177,82 @@ const child = parent.children;
 // console.log(child);
 // console.log(firstChild);
 // console.log(firstChildByIndex);
-parent.insertAdjacentHTML("beforeend", "<div class='row'><h2>Row 5</h2></div>");
+// parent.insertAdjacentHTML("beforeend", "<div class='row'><h2>Row 5</h2></div>");
 
-const specificRow = document.createElement("div");
-specificRow.classList.add("row");
-specificRow.textContent = "Specific Row";
-children[2].after(specificRow);
-children[2].after(specificRow.cloneNode(true));
+// const specificRow = document.createElement("div");
+// specificRow.classList.add("row");
+// specificRow.textContent = "Specific Row";
+// children[2].after(specificRow);
+// children[2].after(specificRow.cloneNode(true));
 
-const replaceRow = document.getElementById("to-replace");
+// const replaceRow = document.getElementById("to-replace");
 
-const absoluteRow = document.createElement("div");
-absoluteRow.classList.add("row");
-absoluteRow.textContent = "Absolute Row";
-replaceRow.replaceWith(absoluteRow);
+// const absoluteRow = document.createElement("div");
+// absoluteRow.classList.add("row");
+// absoluteRow.textContent = "Absolute Row";
+// replaceRow.replaceWith(absoluteRow);
 
-// children[1].remove();
+// // children[1].remove();
 
-children.forEach((element) =>
-  element.addEventListener("click", () => {
-    element.closest(".row").classList.toggle("selected-row");
-  })
-);
+// children.forEach((element) =>
+//   element.addEventListener("click", () => {
+//     element.closest(".row").classList.toggle("selected-row");
+//   })
+// );
 
-h1 = document.querySelector("h1");
-const toggleVisibility = document.querySelector("button");
+// h1 = document.querySelector("h1");
+// const toggleVisibility = document.querySelector("button");
 
-// toggleVisibility.addEventListener("click", () => {
-//   h1.classList.toggle("hidden");
-//   console.log(EventTarget);
+// // toggleVisibility.addEventListener("click", () => {
+// //   h1.classList.toggle("hidden");
+// //   console.log(EventTarget);
+// // });
+
+// // container.insertAdjacentHTML("afterend", "<div class='row'><h2>Row Adjacent</h2></div>");
+
+// const buttonClicked = (event) => {
+//   event.target.textContent = "Clicked";
+// };
+
+// toggleVisibility.addEventListener("click", buttonClicked);
+
+// const form = document.getElementById("form");
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   const name = form.elements["name"];
+//   const mail = form.elements["email"];
+//   console.log(name.value, mail.value);
 // });
 
-// container.insertAdjacentHTML("afterend", "<div class='row'><h2>Row Adjacent</h2></div>");
+// // const name = document.getElementById("name");
 
-const buttonClicked = (event) => {
-  console.log(event.target);
-};
+// const cards = document.querySelectorAll(".card");
 
-toggleVisibility.addEventListener("click", buttonClicked);
+// cards.forEach((card) => {
+//   card.addEventListener("click", (event) => {
+//     event.target.classList.toggle("selected-card");
+//   });
+// });
+
+// const container = document.querySelector(".container");
+
+// // container.addEventListener("click", (event) => {
+// //   if (event.target.classList.contains("card")) {
+// //     event.target.classList.toggle("selected-card");
+// //   }
+// // });
+
+// container.addEventListener("click", (event) => {
+//   event.target.closest(".card").classList.toggle("selected-card");
+// });
+
+const taskForm = document.getElementById("task-form");
+const taskList = document.getElementById("task-list");
+
+taskForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const taskInput = document.getElementById("task-input");
+  const task = taskInput.value;
+  console.log(task);
+});
