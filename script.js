@@ -3307,6 +3307,9 @@ taskForm.addEventListener("submit", (event) => {
 
   if (task) {
     taskList.append(createTaskElement(task));
+    storeTaskInLocalStorage(task);
+    console.log(localStorage);
+
     taskInput.value = "";
   }
 });
@@ -3345,3 +3348,18 @@ function editTask(taskItem) {
     taskItem.firstChild.textContent = newTask;
   }
 }
+
+function storeTaskInLocalStorage(task) {
+  const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+  tasks.push(task);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function loadTasksFromLocalStorage() {
+  const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+  tasks.forEach((task) => {
+    taskList.append(createTaskElement(task));
+  });
+}
+
+window.addEventListener("load", loadTasksFromLocalStorage);
