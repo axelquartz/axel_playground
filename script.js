@@ -3298,6 +3298,7 @@ const taskForm = document.getElementById("task-form");
 const taskList = document.getElementById("task-list");
 
 loadTasks();
+loadTheme();
 
 taskForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -3376,4 +3377,20 @@ function removeFromLocalStorage(taskContent) {
   const updateTasks = tasks.filter((task) => task !== taskContent);
 
   localStorage.setItem("tasks", JSON.stringify(updateTasks));
+}
+
+const toggleThemeBtn = document.getElementById("toggle-theme-btn");
+
+toggleThemeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+
+  const theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+  localStorage.setItem("theme", theme);
+});
+
+function loadTheme() {
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    document.body.classList.add("dark-theme");
+  }
 }
